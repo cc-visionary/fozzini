@@ -3,35 +3,31 @@
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { EffectFade, Pagination, Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 
 import { Card } from "@/components/card";
 import { HOME } from "@/data";
 import { title, subtitle } from "@/components/primitives";
+import clsx from "clsx";
 
 export default function HomePage() {
-  const {
-    heroSection,
-    brandSection,
-    aboutSection,
-    blogSection,
-    contactSection,
-  } = HOME;
+  const { heroSection, brandSection, aboutSection, contactSection } = HOME;
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative px-6">
+      <section className="relative">
         <Swiper
-          modules={[Pagination, Navigation, Autoplay]}
+          effect={"fade"}
+          modules={[Pagination, Navigation, Autoplay, EffectFade]}
           spaceBetween={0}
           slidesPerView={1}
           autoplay={{ delay: 5000 }}
           pagination={{ clickable: true }}
           navigation
           loop
-          className="w-full md:h-[50vh] lg:h-[80vh]"
+          className="w-full md:h-[80vh] lg:h-[100vh]"
         >
           {heroSection.images.map((image, index) => (
             <SwiperSlide key={index}>
@@ -39,7 +35,7 @@ export default function HomePage() {
                 src={image.desktopSrc}
                 alt={image.alt}
                 loading="eager"
-                className="object-cover object-bottom hidden w-screen h-[50vh] lg:h-[80vh] md:block"
+                className="object-cover object-bottom hidden w-screen h-[80vh] lg:h-[100vh] md:block"
                 height={1920}
                 width={1080}
               />
@@ -47,29 +43,29 @@ export default function HomePage() {
                 src={image.mobileSrc}
                 alt={image.alt}
                 loading="eager"
-                className="object-cover object-bottom w-screen h-[50vh] lg:h-[80vh] md:hidden"
+                className="object-cover object-bottom w-screen h-[80vh] lg:h-[100vh] md:hidden"
                 height={1080}
                 width={1920}
               />
+              <div className="absolute inset-0 bg-black/30 flex items-center justify-center text-center text-white">
+                <div className="container mx-16 lg:mx-auto max-w-4xl space-y-4">
+                  <div>
+                    <p className="text-white text-lg lg:text-4xl">
+                      {heroSection.subheading}
+                    </p>
+                    <h2 className="py-8 text-white text-4xl lg:text-[4rem] font-bold">
+                      {heroSection.heading}
+                    </h2>
+                  </div>
+                  <div className="space-y-2 text-sm lg:text-xl">
+                    {heroSection.introduction}
+                  </div>
+                  {heroSection.callToAction}
+                </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
-
-      {/* About Section */}
-      <section className="px-6 text-center">
-        <div className="container mx-auto space-y-4">
-          <div>
-            <h2 className={title()}>{heroSection.heading}</h2>
-            <p className={subtitle()}>{heroSection.subheading}</p>
-          </div>
-          <div className="space-y-2 text-sm text-justify sm:text-md sm:text-center">
-            {heroSection.introduction}
-          </div>
-          <p className="font-semibold text-sm text-justify sm:text-md sm:text-center">
-            {heroSection.callToAction}
-          </p>
-        </div>
       </section>
 
       {/* Brands Section */}
@@ -133,43 +129,6 @@ export default function HomePage() {
           width={400}
         />
       </section>
-
-      {/* Blogs Section */}
-      {blogSection.blogs.length > 0 && (
-        <section className="px-6 py-12">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">Blogs</h2>
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogSection.blogs
-                .slice(0, 3)
-                .map(({ slug, image, title, excerpt }, index) => (
-                  <Card
-                    key={index}
-                    link={`/blogs/${slug}`}
-                    image={image}
-                    title={title}
-                    excerpt={excerpt}
-                  />
-                ))}
-            </div>
-            {blogSection.blogs.length > 3 ? (
-              <div className="text-center mt-8">
-                <Button
-                  as={Link}
-                  href={blogSection.link}
-                  color="primary"
-                  variant="solid"
-                  size="lg"
-                >
-                  {blogSection.cta}
-                </Button>
-              </div>
-            ) : (
-              <></>
-            )}
-          </div>
-        </section>
-      )}
 
       {/* Contact Us Section */}
       <section className="px-6 py-12 flex justify-center gap-4 items-center flex-col bg-white text-center md:flex-row">

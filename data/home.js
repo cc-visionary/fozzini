@@ -1,81 +1,44 @@
 import { Link } from "@nextui-org/link";
 import { ABOUT } from "./about";
-import { BLOGS } from "./blogs";
-import { BRANDS } from "./brands";
+import { PRODUCTS } from "./products";
 import { CONTACT } from "./contact";
-import { FOOTER } from "./footer";
+import { Button } from "@nextui-org/button";
 
 export const HOME = {
   heroSection: {
-    heading: "Live in Style and Comfort.",
-    subheading: "Bridging Global Excellence with Local Aspirations.",
-    introduction: (
-      <>
-        <p>
-          At Kassi Distributors Inc., we embrace both a respect for tradition
-          and a forward-looking vision for Filipino homes. By curating the
-          finest international brands across a broad range of price points, we
-          ensure that every homeowner can enjoy the perfect blend of style and
-          comfort—whether their preference leans toward premium luxury or more
-          approachable elegance.
-        </p>
-        <p>
-          Combining innovation, attentive service, and years of industry
-          experience, we create spaces where practicality meets refined design.
-        </p>
-      </>
-    ),
+    heading: "Live in Comfort",
+    subheading: "Built in Style,",
+    introduction:
+      "Here at Fozzini Lifestyle Concepts, Inc., we believe that living in comfort can go hand-in-hand with sophistication and style. We produce and customize high-calibur modular cabinetry that fits your preference and lifestyle.",
     images: [
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage1_Desktop.jpg",
-        mobileSrc: "/gallery/Home/Hero_HomePage1_Mobile.webp",
-        alt: "Kassi Distributors Inc. Gallery 1",
+        desktopSrc: "/gallery/Home/Hero1.jpg",
+        mobileSrc: "/gallery/Home/Hero1.jpg",
+        alt: "Fozzini Lifestyle Concepts Gallery 1",
       },
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage2_Desktop.jpg",
-        mobileSrc: "/gallery/Home/Hero_HomePage2_Mobile.webp",
-        alt: "Kassi Distributors Inc. Gallery 2",
+        desktopSrc: "/gallery/Home/Hero2.jpg",
+        mobileSrc: "/gallery/Home/Hero2.jpg",
+        alt: "Fozzini Lifestyle Concepts Gallery 2",
       },
       {
-        desktopSrc: "/gallery/Home/Hero_HomePage3_Desktop.jpg",
-        mobileSrc: "/gallery/Home/Hero_HomePage3_Mobile.webp",
-        alt: "Kassi Distributors Inc. Gallery 3",
-      },
-      {
-        desktopSrc: "/gallery/Home/Hero_HomePage4_Desktop.jpg",
-        mobileSrc: "/gallery/Home/Hero_HomePage4_Mobile.webp",
-        alt: "Kassi Distributors Inc. Gallery 4",
-      },
-      {
-        desktopSrc: "/gallery/Home/Hero_HomePage5_Desktop.jpg",
-        mobileSrc: "/gallery/Home/Hero_HomePage5_Mobile.webp",
-        alt: "Kassi Distributors Inc. Gallery 5",
-      },
-      {
-        desktopSrc: "/gallery/Home/Hero_HomePage6_Desktop.jpg",
-        mobileSrc: "/gallery/Home/Hero_HomePage6_Mobile.webp",
-        alt: "Kassi Distributors Inc. Gallery 6",
+        desktopSrc: "/gallery/Home/Hero3.jpg",
+        mobileSrc: "/gallery/Home/Hero3.jpg",
+        alt: "Fozzini Lifestyle Concepts Gallery 3",
       },
     ],
     callToAction: (
-      // <>
-      //   Call us at{" "}
-      //   <Link href={`tel:${FOOTER.contactInformation.telephone}`}>
-      //     {FOOTER.contactInformation.telephone}
-      //   </Link>{" "}
-      //   or{" "}
-      //   <Link href={`tel:${FOOTER.contactInformation.phone}`}>
-      //     {FOOTER.contactInformation.phone}
-      //   </Link>{" "}
-      //   to start planning your dream home today!
-      // </>
-      <>
-        Visit us at our <Link href="/showroom">Showroom</Link> to start planning
-        your dream home today!
-      </>
+      <Button
+        as={Link}
+        variant="bordered"
+        href="/contact"
+        className="text-white text-sm sm:text-lg rounded-none"
+      >
+        Book a Consultation
+      </Button>
     ),
   },
-  brandSection: BRANDS.map(({ slug, name, logo, description }) => ({
+  brandSection: PRODUCTS.map(({ slug, name, logo, description }) => ({
     name: name,
     logo,
     description,
@@ -85,21 +48,15 @@ export const HOME = {
     title: "About Us",
     description: ABOUT.aboutSection.description,
     image: "/gallery/Home/About.webp",
-    alt: "About Kassi Distributors Inc.",
+    alt: "About Fozzini Lifestyle Concepts",
     cta: "Learn More",
     link: "/about",
-  },
-  blogSection: {
-    title: "About Us",
-    blogs: BLOGS,
-    cta: "View All Posts",
-    link: "/blogs",
   },
   contactSection: {
     title: "Contact Us",
     description: CONTACT.subheading,
     image: "/gallery/Home/Contact.jpg",
-    alt: "Contact Kassi Distributors Inc.",
+    alt: "Contact Fozzini Lifestyle Concepts",
     cta: "Contact",
     link: "/contact",
   },

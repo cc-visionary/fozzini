@@ -1,5 +1,4 @@
-import { BLOGS } from "./blogs";
-import { BRANDS } from "./brands";
+import { PRODUCTS } from "./products";
 
 export const NAVBAR = {
   logo: {
@@ -11,7 +10,7 @@ export const NAVBAR = {
     {
       label: "Brands",
       link: "/brands",
-      subcategories: BRANDS.map(({ slug, name, logo }) => ({
+      subcategories: PRODUCTS.map(({ slug, name, logo }) => ({
         label: name,
         logo,
         link: `/brands/${slug}`,
@@ -25,7 +24,6 @@ export const NAVBAR = {
       label: "Showroom",
       link: "/showroom",
     },
-    BLOGS.length > 0 && { label: "Blogs", link: "/blogs" },
     { label: "About Us", link: "/about" },
   ],
 };

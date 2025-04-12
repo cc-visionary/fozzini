@@ -1,4 +1,4 @@
-export const BRANDS = [
+export const PRODUCTS = [
   {
     slug: "nolte-kitchen",
     name: "Nolte Kitchen",

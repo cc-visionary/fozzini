@@ -1,5 +1,3 @@
-import { BLOGS } from "./blogs";
-
 export const FOOTER = {
   companyName: "Kassi Distributors Inc.",
   logo: {
@@ -15,7 +13,6 @@ export const FOOTER = {
       label: "Showroom",
       link: "/showroom",
     },
-    BLOGS.length > 0 && { label: "Blogs", link: "/blogs" },
     { label: "About Us", link: "/about" },
     { label: "Contact Us", link: "/contact" },
   ],

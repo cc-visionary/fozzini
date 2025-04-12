@@ -1,4 +1,4 @@
-import { BRANDS } from "./brands";
+import { PRODUCTS } from "./products";
 
 export const PROJECTS = [
   {
@@ -6,7 +6,7 @@ export const PROJECTS = [
     coverImage:
       "/gallery/Projects/Express Kitchen Compact Kitchen Display/01 Main Image.jpg",
     projectTitle: "Express Kitchen Compact Kitchen Display",
-    brand: BRANDS[1],
+    brand: PRODUCTS[1],
     collection: "STAR | PLAN",
     finish: "239 High Gloss Light Grey, 164 Mountain Oak",
     location: "KDI Main Showroom",
@@ -26,7 +26,7 @@ export const PROJECTS = [
     coverImage:
       "/gallery/Projects/Express Kitchen Utility Room/01 Main image.jpg",
     projectTitle: "Express Kitchen Utility Room Display",
-    brand: BRANDS[1],
+    brand: PRODUCTS[1],
     collection: "STAR",
     finish: "231 High Gloss White",
     location: "KDI Main Showroom",
@@ -40,7 +40,7 @@ export const PROJECTS = [
     coverImage:
       "/gallery/Projects/Nolte Kitchen Artline Display/01 Main Image.jpg",
     projectTitle: "Nolte Kitchen Artline Display",
-    brand: BRANDS[0],
+    brand: PRODUCTS[0],
     collection: "ARTLINE",
     finish: "547 Stripe Wood Coffee",
     location: "KDI Main Showroom",
@@ -60,7 +60,7 @@ export const PROJECTS = [
     coverImage:
       "/gallery/Projects/Nolte Kitchen Live Kitchen Display/01 Main Image.jpg",
     projectTitle: "Nolte Kitchen Live Kitchen Display",
-    brand: BRANDS[0],
+    brand: PRODUCTS[0],
     collection: "MANHATTAN | PORTLAND",
     finish: "48N Oak Nero | 403 Cement Sapphire Grey",
     location: "KDI Main Showroom",
@@ -80,7 +80,7 @@ export const PROJECTS = [
     coverImage:
       "/gallery/Projects/Nolte Kitchen San Isidro Project/01_Main Image.jpg",
     projectTitle: "Nolte Kitchen San Isidro Project",
-    brand: BRANDS[0],
+    brand: PRODUCTS[0],
     collection: "TORINO LACK",
     finish: "C08 Sahara",
     location: "Pasig City",
@@ -100,7 +100,7 @@ export const PROJECTS = [
     coverImage:
       "/gallery/Projects/Nolte Kitchen The Enclave Project/01 Main Image.jpg",
     projectTitle: "Nolte Kitchen The Enclave Project",
-    brand: BRANDS[0],
+    brand: PRODUCTS[0],
     collection: "SOFT LACK",
     finish: "76B Blueberry",
     location: "Alabang City",
@@ -119,7 +119,7 @@ export const PROJECTS = [
     coverImage:
       "/gallery/Projects/Nolte Kitchen Two Serendra Project/01 Main Image.jpg",
     projectTitle: "Nolte Kitchen Two Serendra Project",
-    brand: BRANDS[0],
+    brand: PRODUCTS[0],
     collection: "ARTWOOD | MANHATTAN UNI",
     finish: "22K Walnut Cuba, 490 White",
     location: "Taguig City",

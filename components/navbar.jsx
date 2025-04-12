@@ -73,7 +73,7 @@ export const Navbar = () => {
                         <Button
                           disableRipple
                           className={
-                            "text-white data-[active=true]:text-primary data-[active=true]:font-medium"
+                            "rounded-none text-white data-[active=true]:text-primary data-[active=true]:font-medium"
                           }
                           endContent={<ChevronDown size={16} />}
                           radius="sm"
@@ -116,7 +116,6 @@ export const Navbar = () => {
                 ) : (
                   <NavbarItem key={link}>
                     <Button
-                      disableRipple
                       as={Link}
                       className={
                         "text-white rounded-none h-10 data-[active=true]:text-primary data-[active=true]:font-medium"
