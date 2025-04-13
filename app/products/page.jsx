@@ -4,17 +4,16 @@ import { PRODUCTS } from "@/data";
 
 export default function ProductsListPage() {
   return (
-    <div>
+    <div className="mx-auto max-w-7xl py-8 px-6 flex-grow min-h-[60vh]">
       <h1 className={title()}>Our Products</h1>
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
         {PRODUCTS.map(({ name, thumbnail, slug, excerpt }, index) => (
           <Card
             key={index}
-            link={`/brands/${slug}`}
+            link={`/products/${slug}`}
             image={thumbnail.src}
             title={name}
             excerpt={excerpt}
-            contain
           />
         ))}
       </div>

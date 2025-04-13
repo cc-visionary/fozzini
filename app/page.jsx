@@ -8,8 +8,6 @@ import Image from "next/image";
 
 import { Card } from "@/components/card";
 import { HOME } from "@/data";
-import { title, subtitle } from "@/components/primitives";
-import clsx from "clsx";
 
 export default function HomePage() {
   const { heroSection, productSection, aboutSection, contactSection } = HOME;
@@ -121,29 +119,40 @@ export default function HomePage() {
       </section>
 
       {/* Contact Us Section */}
-      <section className="max-w-3xl mx-auto px-6 py-12 flex justify-center gap-4 items-center flex-col-reverse bg-white md:flex-row lg:px-0">
-        <div className="mx-auto flex flex-col justify-center items-center text-center sm:items-end sm:text-right">
-          <h2 className="text-3xl font-bold mb-4">{contactSection.title}</h2>
-          <div className="space-y-2 max-w-xl text-sm sm:text-md">
-            {contactSection.description}
-          </div>
-          <Button
-            className="mt-6 rounded-none"
-            as={Link}
-            href={contactSection.link}
-            color="primary"
-            variant="solid"
-            size="lg"
-          >
-            {contactSection.cta}
-          </Button>
+      <section className="relative px-6 py-12 lg:px-0">
+        <div className="absolute right-0 top-0 h-full w-1/4 hidden md:block z-0 pointer-events-none">
+          <div
+            className="h-full w-full bg-repeat bg-right"
+            style={{
+              backgroundImage: "url('/gallery/Background Square Pattern.png')",
+            }}
+          />
         </div>
-        <Image
-          src={contactSection.image}
-          alt={contactSection.alt}
-          height={400}
-          width={400}
-        />
+
+        <div className="max-w-3xl mx-auto flex justify-center gap-4 items-center flex-col-reverse md:flex-row ">
+          <div className="mx-auto flex flex-col justify-center items-center text-center sm:items-end sm:text-right">
+            <h2 className="text-3xl font-bold mb-4">{contactSection.title}</h2>
+            <div className="space-y-2 max-w-xl text-sm sm:text-md">
+              {contactSection.description}
+            </div>
+            <Button
+              className="mt-6 rounded-none"
+              as={Link}
+              href={contactSection.link}
+              color="primary"
+              variant="solid"
+              size="lg"
+            >
+              {contactSection.cta}
+            </Button>
+          </div>
+          <Image
+            src={contactSection.image}
+            alt={contactSection.alt}
+            height={400}
+            width={400}
+          />
+        </div>
       </section>
     </>
   );

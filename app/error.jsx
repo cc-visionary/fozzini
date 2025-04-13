@@ -11,14 +11,18 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[40vh] px-4">
+    <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
       <div className="max-w-md w-full p-6 space-y-4 text-center shadow-lg">
         <h2>Oops! Something went wrong.</h2>
         <p color="gray">
           An unexpected error occurred. Please try again, or contact support if
           the issue persists.
         </p>
-        <Button color="primary" className="w-full" onPress={() => reset()}>
+        <Button
+          color="primary"
+          className="w-full rounded-none"
+          onPress={() => reset()}
+        >
           Try Again
         </Button>
       </div>

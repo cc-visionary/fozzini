@@ -1,10 +1,9 @@
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import Image from "next/image";
 
 import { PRODUCTS } from "@/data";
-import { title } from "@/components/primitives";
 import Gallery from "@/components/gallery";
+import Carousel from "@/components/carousel";
 
 // Static paths generation
 export async function generateStaticParams() {
@@ -14,19 +13,19 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { brand } = await params;
-  const brandData = PRODUCTS.find((b) => b.slug === brand);
-  if (!brandData) return notFound();
+  const { product } = await params;
+  const productData = PRODUCTS.find((b) => b.slug === product);
+  if (!productData) return notFound();
 
   return {
-    title: `${brandData.name} | Explore ${brandData.name} Products & Designs`,
-    description: brandData.description,
+    title: `${productData.name} | Explore ${productData.name} Products & Designs`,
+    description: productData.description,
     openGraph: {
-      title: `${brandData.name}`,
-      description: brandData.description,
-      url: `https://kassidinc.com/brands/${brandData.slug}`,
+      title: `${productData.name}`,
+      description: productData.description,
+      url: `https://kassidinc.com/brands/${productData.slug}`,
       siteName: "Kassi Distributors Inc.",
-      images: [brandData.thumbnail.src],
+      images: [productData.thumbnail.src],
       type: "website",
     },
   };
@@ -34,95 +33,89 @@ export async function generateMetadata({ params }) {
 
 // Page Component
 export default async function BrandItemPage({ params }) {
-  const { brand } = await params;
+  const { product } = await params;
 
-  // Find the brand data by slug
-  const brandData = PRODUCTS.find((b) => b.slug === brand);
+  // Find the product data by slug
+  const productData = PRODUCTS.find((b) => b.slug === product);
 
-  if (!brandData) {
+  if (!productData) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[40vh] px-4">
         <div className="max-w-md text-center bg-white p-8 shadow-lg">
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
-            Brand Not Found
+            Product Not Found
           </h1>
           <p className="text-gray-600 mb-6">
-            Oops! The brand you're looking for doesn't exist or might have been
-            removed. Don't worry, there's more to explore!
+            Oops! The product you're looking for doesn't exist or might have
+            been removed. Don't worry, there's more to explore!
           </p>
-          <Button className="w-full" color="primary" as={Link} href="/brands">
-            Back to Brands
+          <Button className="w-full" color="primary" as={Link} href="/products">
+            Back to Products
           </Button>
         </div>
       </div>
     );
   }
 
-  const { name, thumbnail, description, catalogue, comingSoon, gallery } =
-    brandData;
+  const { name, excerpt, description, sellingPoint, covers, gallery } =
+    productData;
 
   return (
     <>
-      {/* Hero Section */}
-      {!comingSoon ? (
-        <section className="flex justify-center items-center p-4 relative bg-gray-100 flex-col lg:gap-8 lg:flex-row sm:p-12">
-          <div className="relative h-48 md:h-64 w-screen">
-            <Image
-              src={thumbnail.src}
-              alt={thumbnail.alt}
-              className="object-contain"
-              fill
-            />
+      <Carousel
+        images={covers}
+        sizeClass="w-full h-[30vh] md:h-[40vh] lg:h-[50vh]"
+      />
+
+      {/* Description Section */}
+      <section className="relative h-[30vh] px-6 py-12 flex justify-center gap-4 items-center lg:px-0">
+        <div className="absolute left-0 top-0 h-full w-1/3 hidden xl:block z-0 pointer-events-none">
+          <div
+            className="h-full w-full bg-repeat bg-right"
+            style={{
+              backgroundImage: "url('/gallery/Background Square Pattern.png')",
+            }}
+          />
+        </div>
+        <div className="max-w-sm mx-auto flex flex-col justify-center items-center text-center sm:items-start sm:text-left">
+          <h2 className="text-3xl font-bold mb-4">{name}</h2>
+          <div className="space-y-2 max-w-xl text-md sm:text-lg">
+            {description}
           </div>
-          <div className="flex flex-col text-center sm:text-left">
-            <h3 className="text-3xl font-bold">{name}</h3>
-            <p className="text-sm text-gray-700 mb-4 text-justify sm:text-lg">
-              {description}
-            </p>
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <Button
-                as={Link}
-                href="/showroom"
-                color="primary"
-                variant="solid"
-              >
-                Visit Us
-              </Button>
-              <Button
-                as={Link}
-                href={catalogue}
-                color="primary"
-                variant="solid"
-                isExternal
-              >
-                Download Catalogue
-              </Button>
-            </div>
-          </div>
-        </section>
-      ) : (
-        <section className="min-h-[50vh] flex flex-col justify-center items-center my-auto">
-          <div className="relative h-48 md:h-64 w-64">
-            <Image
-              src={thumbnail.src}
-              alt={thumbnail.alt}
-              className="object-contain"
-              fill
-            />
-          </div>
-          <p className="text-sm text-gray-700 mb-4 sm:text-lg">{description}</p>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Gallery Section */}
-      {gallery.length > 0 && (
-        <section className="mt-10 bg-white">
-          <div className="container mx-auto">
-            <h2 className={title()}>Gallery</h2>
-            <Gallery gallery={gallery} />
+      <section className="px-6 bg-primary text-white lg:px-0">
+        <div className="max-w-3xl mx-auto flex justify-center gap-4 items-center flex-col md:flex-row">
+          <Carousel
+            images={gallery}
+            sizeClass="h-[40rem] w-[24rem]"
+            height={1920}
+            width={1080}
+          />
+          <div className="space-y-2 max-w-xl text-md text-center md:text-left sm:text-lg py-8">
+            {excerpt}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
+
+      {/* Selling Point Section */}
+      <section className="relative h-[50vh] px-6 py-12 flex justify-center gap-4 items-center lg:px-0">
+        <div className="absolute right-0 top-0 h-full w-1/3 hidden xl:block z-0 pointer-events-none">
+          <div
+            className="h-full w-full bg-repeat bg-right"
+            style={{
+              backgroundImage: "url('/gallery/Background Square Pattern.png')",
+            }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto xl:pr-64 flex flex-col justify-center items-center text-center sm:items-start sm:text-left">
+          <div className="space-y-2 max-w-xl text-md sm:text-lg">
+            {sellingPoint}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

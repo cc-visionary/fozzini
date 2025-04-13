@@ -15,9 +15,9 @@ export const Card = ({ link, image, title, excerpt, contain = false }) => {
           fill
         />
       </div>
-      <div className="p-4">
+      <div className="p-4 text-center">
         <h2 className="text-xl font-bold line-clamp-2">{title}</h2>
-        <p className="text-gray-700 mt-2 line-clamp-3 text-center text-xs sm:text-md">
+        <p className="text-gray-700 mt-2 line-clamp-3 text-xs sm:text-md">
           {excerpt}
         </p>
       </div>

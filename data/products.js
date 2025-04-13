@@ -8,33 +8,49 @@ export const PRODUCTS = [
     },
     excerpt:
       "Give life to your home’s common spaces by making use of stylish and practical cabinetry pieces.",
-    description: (
+    description:
+      "Browse modular cabinetry built for a modern and sophisticated home.",
+    sellingPoint: (
       <>
-        With Nolte Küchen, the kitchen transcends its functional role—it becomes
-        the heart of the home. Recognized as Germany’s favorite kitchen brand,
-        Nolte harmonizes innovation and individuality, offering a broad range of
-        solutions for various lifestyles and budgets. Each Nolte kitchen is{" "}
-        <strong>Made in Germany</strong> with a focus on sustainability and
-        meticulous craftsmanship, creating a warm, inviting space where family
-        and friends naturally come together.
+        <p>
+          Moments with the family are best made in the perfect spaces. It’s all
+          about making room to breathe, and finding ways on how to best recharge
+          through recreation and quality time.
+        </p>
+        <br />
+        <p>
+          We offer modular cabinetry of high caliber that is custom built to
+          suit your taste and complete the feel of your home, perfect for both
+          relaxation and entertainment.{" "}
+        </p>
       </>
     ),
+    covers: [
+      {
+        src: "/gallery/Products/LivingRoom/LivingRoomCover1.jpg",
+        caption: "Living Room Setup 1",
+      },
+      {
+        src: "/gallery/Products/LivingRoom/LivingRoomCover2.jpg",
+        caption: "Living Room Setup 2",
+      },
+      {
+        src: "/gallery/Products/LivingRoom/LivingRoomCover3.jpg",
+        caption: "Living Room Setup 3",
+      },
+    ],
     gallery: [
       {
-        src: "/gallery/Brands/Nolte/WIDE0035-HDR.webp",
-        caption: "Nolte Kitchen Setup 1",
+        src: "/gallery/Products/LivingRoom/ModularCabinet1.jpg",
+        caption: "Living Room Cabinet 1",
       },
       {
-        src: "/gallery/Brands/Nolte/WIDE9775-HDR.webp",
-        caption: "Nolte Kitchen Setup 2",
+        src: "/gallery/Products/LivingRoom/ModularCabinet2.jpg",
+        caption: "Living Room Cabinet 2",
       },
       {
-        src: "/gallery/Brands/Nolte/WIDE9885-HDR.webp",
-        caption: "Nolte Kitchen Setup 3",
-      },
-      {
-        src: "/gallery/Brands/Nolte/WIDE9945-HDR.webp",
-        caption: "Nolte Kitchen Setup 4",
+        src: "/gallery/Products/LivingRoom/ModularCabinet3.jpg",
+        caption: "Living Room Cabinet 3",
       },
     ],
   },
@@ -47,26 +63,64 @@ export const PRODUCTS = [
     },
     excerpt:
       "Our modular kitchen cabinetry combines practicality and style in one go.",
-    description: (
+    description: "Browse modular cabinetry built for a modern kitchen.",
+    sellingPoint: (
       <>
-        A member of the Nolte Group, Express Küchen presents a dynamic and
-        affordable way to achieve modern kitchen design. By marrying
-        contemporary style with straightforward functionality, Express Küchen
-        stays true to its <strong>Made in Germany</strong> heritage. From
-        minimalistic layouts to trend-forward statements, it offers a balanced
-        blend of design appeal, reliability, and budget-conscious
-        solutions—proving that accessibility need not compromise quality or
-        flair.
+        <p>
+          There is something about a well-organized kitchen that can just put
+          anyone in the right mood to prepare the most tasteful meals. It
+          creates the perfect balance between sophisticated design and practical
+          needs.
+        </p>
+        <br />
+        <p>
+          Make sure your kitchen space looks sleek and clutter-free by making
+          use of customizable storage spaces that fit your style.
+        </p>
       </>
     ),
-    gallery: [
+    covers: [
       {
-        src: "/gallery/Brands/Express/WIDE9820-HDR.webp",
-        caption: "Express Kitchen 1",
+        src: "/gallery/Products/Kitchen/KitchenCover1.jpg",
+        caption: "Kitchen Setup 1",
       },
       {
-        src: "/gallery/Brands/Express/WIDE9860-HDR.webp",
-        caption: "Express Kitchen 2",
+        src: "/gallery/Products/Kitchen/KitchenCover2.jpg",
+        caption: "Kitchen Setup 2",
+      },
+      {
+        src: "/gallery/Products/Kitchen/KitchenCover3.jpg",
+        caption: "Kitchen Setup 3",
+      },
+      {
+        src: "/gallery/Products/Kitchen/KitchenCover4.jpg",
+        caption: "Kitchen Setup 4",
+      },
+      {
+        src: "/gallery/Products/Kitchen/KitchenCover5.jpg",
+        caption: "Kitchen Setup 5",
+      },
+    ],
+    gallery: [
+      {
+        src: "/gallery/Products/Kitchen/ModularCabinet1.jpg",
+        caption: "Kitchen Cabinet 1",
+      },
+      {
+        src: "/gallery/Products/Kitchen/ModularCabinet2.jpg",
+        caption: "Kitchen Cabinet 2",
+      },
+      {
+        src: "/gallery/Products/Kitchen/ModularCabinet3.jpg",
+        caption: "Kitchen Cabinet 3",
+      },
+      {
+        src: "/gallery/Products/Kitchen/ModularCabinet4.jpg",
+        caption: "Kitchen Cabinet 4",
+      },
+      {
+        src: "/gallery/Products/Kitchen/ModularCabinet5.jpg",
+        caption: "Kitchen Cabinet 5",
       },
     ],
   },
@@ -79,9 +133,93 @@ export const PRODUCTS = [
     },
     excerpt:
       "Your bedroom is your sanctuary. Your preference, your style, your design.",
-    description: "Coming Soon",
-    catalogue: null,
-    gallery: [],
+    description: "Browse through modular cabinetry built for a modern bedroom.",
+    sellingPoint: (
+      <>
+        <p>
+          The bedroom can tell a lot about a person – one’s priorities, daily
+          routine, and lifestyle. At the end of the day, creating a restorative
+          environment is conducive to a good night sleep, and a restful break.
+        </p>
+        <br />
+        <p>
+          Translate your style into the aesthetic of your bedroom with accent
+          modular cabinetry pieces that are both sophisticated and functional.
+        </p>
+      </>
+    ),
+    covers: [
+      {
+        src: "/gallery/Products/Bedroom/BedroomCover1.jpg",
+        caption: "Bedroom Setup 1",
+      },
+      {
+        src: "/gallery/Products/Bedroom/BedroomCover2.jpg",
+        caption: "Bedroom Setup 2",
+      },
+      {
+        src: "/gallery/Products/Bedroom/BedroomCover3.jpg",
+        caption: "Bedroom Setup 3",
+      },
+      {
+        src: "/gallery/Products/Bedroom/BedroomCover4.jpg",
+        caption: "Bedroom Setup 4",
+      },
+    ],
+    gallery: [
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet1.jpg",
+        caption: "Bedroom Cabinet 1",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet2.jpg",
+        caption: "Bedroom Cabinet 2",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet3.jpg",
+        caption: "Bedroom Cabinet 3",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet4.jpg",
+        caption: "Bedroom Cabinet 4",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet5.jpg",
+        caption: "Bedroom Cabinet 5",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet6.jpg",
+        caption: "Bedroom Cabinet 6",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet7.jpg",
+        caption: "Bedroom Cabinet 7",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet8.jpg",
+        caption: "Bedroom Cabinet 8",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet9.jpg",
+        caption: "Bedroom Cabinet 9",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet10.jpg",
+        caption: "Bedroom Cabinet 10",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet11.jpg",
+        caption: "Bedroom Cabinet 11",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet12.jpg",
+        caption: "Bedroom Cabinet 12",
+      },
+      {
+        src: "/gallery/Products/Bedroom/ModularCabinet13.jpg",
+        caption: "Bedroom Cabinet 13",
+      },
+    ],
   },
   {
     slug: "bathroom",
@@ -91,8 +229,59 @@ export const PRODUCTS = [
       alt: "Kitchen Thumbnail",
     },
     excerpt: "Maximizing your bathroom space is a necessary luxury.",
-    description: "Coming Soon",
-    catalogue: null,
-    gallery: [],
+    description: "Browse through modular cabinetry built for a modern bath.",
+    sellingPoint: (
+      <>
+        <p>
+          Let your bathroom evoke comfort with our modern and luxurious designs
+          to suit your custom sanctuary. Our modular cabinetry combines form and
+          function to keep your personal space sleek.
+        </p>
+      </>
+    ),
+    covers: [
+      {
+        src: "/gallery/Products/Bathroom/BathroomCover1.jpg",
+        caption: "Bathroom Setup 1",
+      },
+      {
+        src: "/gallery/Products/Bathroom/BathroomCover2.jpg",
+        caption: "Bathroom Setup 2",
+      },
+      {
+        src: "/gallery/Products/Bathroom/BathroomCover3.jpg",
+        caption: "Bathroom Setup 3",
+      },
+      {
+        src: "/gallery/Products/Bathroom/BathroomCover4.jpg",
+        caption: "Bathroom Setup 4",
+      },
+    ],
+    gallery: [
+      {
+        src: "/gallery/Products/Bathroom/ModularCabinet1.jpg",
+        caption: "Bathroom Cabinet 1",
+      },
+      {
+        src: "/gallery/Products/Bathroom/ModularCabinet2.jpg",
+        caption: "Bathroom Cabinet 2",
+      },
+      {
+        src: "/gallery/Products/Bathroom/ModularCabinet3.jpg",
+        caption: "Bathroom Cabinet 3",
+      },
+      {
+        src: "/gallery/Products/Bathroom/ModularCabinet4.jpg",
+        caption: "Bathroom Cabinet 4",
+      },
+      {
+        src: "/gallery/Products/Bathroom/ModularCabinet5.jpg",
+        caption: "Bathroom Cabinet 5",
+      },
+      {
+        src: "/gallery/Products/Bathroom/ModularCabinet6.jpg",
+        caption: "Bathroom Cabinet 6",
+      },
+    ],
   },
 ];
