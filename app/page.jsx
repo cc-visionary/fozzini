@@ -69,9 +69,9 @@ export default function HomePage() {
       {/* Products Section */}
       <section className="max-w-3xl px-6 lg:px-0 py-12 mx-auto text-center mt-8">
         <div className="container mx-auto">
-          <div className="max-w-lg mx-auto">
+          <div className="max-w-xl mx-auto">
             <h2 className="text-3xl font-bold">Our Products</h2>
-            <p>
+            <p className="text-md sm:text-lg">
               Browse through our selection of modular cabinetry and spark ideas
               to inspire your own home design, built with style for your
               comfort.
@@ -102,7 +102,7 @@ export default function HomePage() {
           />
           <div className="mx-auto flex flex-col items-center sm:items-start justify-center">
             <h2 className="text-3xl font-bold mb-4">{aboutSection.title}</h2>
-            <div className="space-y-2 max-w-xl text-sm sm:text-md">
+            <div className="space-y-2 max-w-xl text-md sm:text-lg">
               {aboutSection.description}
             </div>
             <Button
@@ -119,20 +119,20 @@ export default function HomePage() {
       </section>
 
       {/* Contact Us Section */}
-      <section className="relative px-6 py-12 lg:px-0">
+      <section className="relative px-6 lg:px-0">
         <div className="absolute right-0 top-0 h-full w-1/4 hidden md:block z-0 pointer-events-none">
           <div
-            className="h-full w-full bg-repeat bg-right"
+            className="h-full w-full bg-no-repeat bg-right"
             style={{
               backgroundImage: "url('/gallery/Background Square Pattern.png')",
             }}
           />
         </div>
 
-        <div className="max-w-3xl mx-auto flex justify-center gap-4 items-center flex-col-reverse md:flex-row ">
+        <div className="py-8 max-w-3xl mx-auto flex justify-center gap-4 items-center flex-col-reverse md:flex-row">
           <div className="mx-auto flex flex-col justify-center items-center text-center sm:items-end sm:text-right">
             <h2 className="text-3xl font-bold mb-4">{contactSection.title}</h2>
-            <div className="space-y-2 max-w-xl text-sm sm:text-md">
+            <div className="space-y-2 max-w-xl text-md sm:text-lg">
               {contactSection.description}
             </div>
             <Button

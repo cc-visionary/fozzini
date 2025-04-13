@@ -8,8 +8,7 @@ export const HOME = {
   heroSection: {
     heading: "Live in Comfort",
     subheading: "Built in Style,",
-    introduction:
-      "Here at Fozzini Lifestyle Concepts, Inc., we believe that living in comfort can go hand-in-hand with sophistication and style. We produce and customize high-calibur modular cabinetry that fits your preference and lifestyle.",
+    introduction: ABOUT.aboutSection.description,
     images: [
       {
         desktopSrc: "/gallery/Home/Hero1.jpg",

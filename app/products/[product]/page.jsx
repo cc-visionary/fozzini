@@ -71,7 +71,7 @@ export default async function BrandItemPage({ params }) {
       <section className="relative h-[30vh] px-6 py-12 flex justify-center gap-4 items-center lg:px-0">
         <div className="absolute left-0 top-0 h-full w-1/3 hidden xl:block z-0 pointer-events-none">
           <div
-            className="h-full w-full bg-repeat bg-right"
+            className="h-full w-full bg-no-repeat bg-left"
             style={{
               backgroundImage: "url('/gallery/Background Square Pattern.png')",
             }}
@@ -104,7 +104,7 @@ export default async function BrandItemPage({ params }) {
       <section className="relative h-[50vh] px-6 py-12 flex justify-center gap-4 items-center lg:px-0">
         <div className="absolute right-0 top-0 h-full w-1/3 hidden xl:block z-0 pointer-events-none">
           <div
-            className="h-full w-full bg-repeat bg-right"
+            className="h-full w-full bg-no-repeat bg-right"
             style={{
               backgroundImage: "url('/gallery/Background Square Pattern.png')",
             }}

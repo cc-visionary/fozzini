@@ -1,81 +1,88 @@
 export const ABOUT = {
+  coverImage: {
+    src: "/gallery/About Us/AboutCover.jpg",
+    alt: "KDI About Cover",
+  },
   aboutSection: {
-    title: "About Us",
+    title: "Built in Style, Live in Comfort",
     description: (
       <>
         <p>
-          At Kassi Distributors Inc., our company is driven by both a respect
-          for tradition and a forward-looking vision for Filipino homes. By
-          curating the finest international brands across a wide spectrum of
-          price points, we ensure that everyone can Live in Style and Comfort,
-          whether their preference leans toward premium luxury or more
-          approachable elegance. Our operation combines innovation, attentive
-          service, and decades of manufacturing expertise to create interiors
-          where practicality meets refined design.
+          Here at Fozzini Lifestyle Concepts, Inc., we believe that living in
+          comfort can go hand-in-hand with sophistication and style. We produce
+          and customize high-calibur modular cabinetry that fits your preference
+          and lifestyle.
         </p>
       </>
     ),
   },
-  servicesSection: {
-    title: "What We Do",
-    services: [
-      {
-        image: "/gallery/About/Services/Expert Led Design.webp",
-        title: "Expert-Led Design & Product Consultation",
-        description:
-          "At KDI, every project starts with a clear vision and a commitment to excellence. Our seasoned consultants collaborate closely with homeowners, architects, and developers to capture each client’s unique style. By combining creativity, technical expertise, and global design insights, we ensure that every recommendation—whether for a single room or an entire residence—perfectly balances form and function.",
-      },
-      {
-        image: "/gallery/About/Services/Curated Products.webp",
-        title: "Curated Products & Offerings",
-        description:
-          "We handpick premium brands and solutions from globally recognized suppliers—chosen for their superior craftsmanship, innovative design, and enduring quality. Our goal is to present you with a refined selection of products that seamlessly blend with your overall aesthetic, delivering a truly elevated living experience.",
-      },
-      {
-        image: "/gallery/About/Services/Integrated Solutions.webp",
-        title: "Integrated Solutions for Your Ideal Space",
-        description:
-          "From initial concepts to final installation, KDI provides a holistic approach to interior transformations. Our cohesive solutions span layout planning, furniture selection, and storage optimization, ensuring a seamless marriage of style and practicality. Whether you’re modernizing a single area or reinventing your entire home, our integrated process simplifies decision-making every step of the way.",
-      },
-      {
-        image: "/gallery/About/Services/Dedicated After Sales.webp",
-        title: "Dedicated After-Sales & Long-Term Support",
-        description:
-          "Our relationship with you doesn’t end once the project is complete. KDI offers robust after-sales assistance, including warranty programs, expert maintenance, and ongoing support to safeguard your investment. Whether you need part replacements or simply want design tips down the road, our dedicated team is always ready to help—ensuring your spaces retain their beauty and function for years to come.",
-      },
-    ],
+  ourMissionSection: {
+    title: "Our Mission",
+    description:
+      "Fozzini is a company dedicated to producing innovative and well-designed furniture and modular cabinetry; providing its clients with a comfortable yet refined living experience.",
+    image: {
+      src: "/gallery/About Us/OurMission.jpg",
+      alt: "Fozzini Lifestyle Concepts Our Mission",
+    },
   },
-  historySection: [
-    {
-      year: "1970s",
-      description:
-        "Kassi Distributors Inc. (KDI) traces its beginnings to the 1970s, when its parent company—Fozzini Lifestyle Concepts Inc.—started as a modest woodworking workshop in Binondo, Manila. ",
-      image: "/gallery/About/History/History 1_Traces.webp",
+  ourStorySection: {
+    title: "Our Story",
+    description: (
+      <>
+        <p>
+          Fozzini Lifestyle Concepts, Inc. had its humble beginnings in the
+          1960’s as a simple woodworking workshop located in Binondo, Manila. At
+          the time, the company had only been crafting wooden chests and boxes
+          for a myriad of consumers.
+        </p>
+        <p>
+          By the 1970’s, the company grew large enough to relocate to the
+          industrial area of Valenzuala, and had expanded its production line to
+          include different types of home furniture such as dining tables and
+          chairs. During this time the company restructured under the name of
+          Everwood Products Manufacturing, Inc.
+        </p>
+        <p>
+          In the 1980’s the business was acquired by a group of entrepreneurs
+          and rebranded to Jowbiwood Products Manufacturing, Inc. while
+          maintaining Everwood as its brand name for the company’s furniture
+          line.
+        </p>
+        <p>
+          In the 1990’s, the business had grown to include the manufacturing of
+          steel furniture, modular cabinetry, and a myriad of upholstery
+          products. It was during this successful period that the company was
+          able to expand and reach a nationwide market.
+        </p>
+        <p>
+          Entering a new millennium meant entering a new era for the company,
+          and by the late 2000’s the company finally rebranded to Fozzini
+          Lifestyle Concepts, Inc. To this day, the company continues to
+          manufacture and supply high caliber furniture and modular cabinetry.
+        </p>
+        <p>
+          With Fozzini Lifestyle Concepts, Inc., we guarantee that you can live
+          in comfort.
+        </p>
+      </>
+    ),
+    image: {
+      src: "/gallery/About Us/OurStory.jpg",
+      alt: "Fozzini is a company dedicated to producing innovative modular cabinetry.",
     },
-    {
-      year: "2000s",
-      description:
-        "Over the decades, that small enterprise evolved into a respected furniture and modular cabinetry manufacturer, earning its reputation for quality craftsmanship and continuous innovation.",
-      image: "/gallery/About/History/History 2_Evolution.webp",
+  },
+  ourPhilosophySection: {
+    title: "Our Philosophy",
+    description:
+      "Fozzini exists to provide a stylistic yet comfortable lifestyle to its clients through the furnishing and functional division of living environments; specializing in modular cabinetry and custom-built furniture.",
+    image: {
+      src: "/gallery/About Us/OurPhilosophy.jpg",
+      alt: "Fozzini Lifestyle Concepts Our Philosophy",
     },
-    {
-      year: "2024",
-      description:
-        "In 2024, KDI was formed as an independent subsidiary with a singular mission: Bridging Global Excellence with Local Aspirations. Entrusted with distributing world-class brands such as Nolte Küchen and Express Küchen, KDI remains committed to upholding its legacy of excellence while embracing fresh possibilities in the local design landscape.",
-      image: "/gallery/About/History/History 3_Current.webp",
-    },
-  ],
-  missionVisionSection: {
-    image: "/gallery/About/Mission Vision.jpg",
-    mission: {
-      title: "Our Mission",
-      description:
-        "At Kassi Distributors Inc., our mission is to connect global excellence with local aspirations by delivering world-class products tailored to the Filipino market. Guided by our heritage and expertise, we provide top-tier solutions, build lasting relationships, and empower clients to live in style and comfort—always driven by innovation, quality, and personalized care.",
-    },
-    vision: {
-      title: "Our Vision",
-      description:
-        "We aim to elevate every Filipino home through products and solutions that blend daily convenience with time-honored craftsmanship. By setting new benchmarks in Philippine design, we seamlessly unite global standards with local character in every space we touch.",
-    },
+  },
+  ourLocationSection: {
+    title: "Our Location",
+    description:
+      "22 Rincon Road, Malinta, 1440, Valenzuela City, Metro Manila, Philippines",
   },
 };

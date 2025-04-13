@@ -5,31 +5,31 @@ import { ABOUT } from "@/data";
 
 export async function generateMetadata() {
   return {
-    title: "About Us | Kassi Distributors Inc.",
+    title: "About Us | Fozzini Lifestyle Concepts",
     description:
-      "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+      "Discover Fozzini Lifestyle Concepts—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
     openGraph: {
-      title: "About Us | Kassi Distributors Inc.",
+      title: "About Us | Fozzini Lifestyle Concepts",
       description:
-        "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+        "Discover Fozzini Lifestyle Concepts—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
       url: "https://kassidinc.com/about",
-      siteName: "Kassi Distributors Inc.",
+      siteName: "Fozzini Lifestyle Concepts",
       images: [
         {
-          url: "/gallery/About/History 3_Current.webp",
+          url: "/gallery/About Us/AboutCover.jpg",
           width: 1200,
           height: 630,
-          alt: "Kassi Distributors Inc. About Us",
+          alt: "Fozzini Lifestyle Concepts About Us",
         },
       ],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: "About Us | Kassi Distributors Inc.",
+      title: "About Us | Fozzini Lifestyle Concepts",
       description:
-        "Discover Kassi Distributors Inc.—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
-      images: ["/gallery/About/History 3_Current.webp"],
+        "Discover Fozzini Lifestyle Concepts—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+      images: ["/gallery/About Us/AboutCover.jpg"],
     },
     alternates: {
       canonical: "https://kassidinc.com/about",
@@ -39,144 +39,133 @@ export async function generateMetadata() {
 
 export default function AboutPage() {
   const {
-    servicesSection,
-    historySection,
+    coverImage,
     aboutSection,
-    missionVisionSection,
+    ourMissionSection,
+    ourStorySection,
+    ourPhilosophySection,
+    ourLocationSection,
   } = ABOUT;
 
   return (
     <>
+      <div className="relative h-[50vh]">
+        <Image
+          src={coverImage.src}
+          alt={coverImage.alt}
+          className="object-cover"
+          fill
+        />
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-center text-white">
+          logo
+        </div>
+      </div>
+
       {/* About Section */}
-      <section className="text-center space-y-6 py-12 sm:py-16 lg:py-20 xl:py-24">
-        <h1 className={title()}>{aboutSection.title}</h1>
-        <div className="text-base text-justify space-y-4 text-gray-600 sm:text-center">
-          {aboutSection.description}
+      <section className="relative h-[50vh] px-6 py-12 flex justify-center gap-4 items-center lg:px-0">
+        <div className="absolute right-0 top-0 h-full w-1/3 hidden xl:block z-0 pointer-events-none">
+          <div
+            className="h-full w-full bg-no-repeat bg-right"
+            style={{
+              backgroundImage: "url('/gallery/Background Square Pattern.png')",
+            }}
+          />
         </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="text-center space-y-6 py-12 sm:py-16 lg:py-20 xl:py-24">
-        {/* Section Title */}
-        <h2 className={title()}>{servicesSection.title}</h2>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {servicesSection.services.map((service, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center space-y-4"
-            >
-              {/* Image */}
-              <div className="relative w-full h-64 overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  className="object-cover"
-                  fill
-                />
-              </div>
-
-              {/* Title */}
-              <h3 className="text-lg font-semibold">{service.title}</h3>
-
-              {/* Description */}
-              <p className="text-base text-gray-600 text-justify">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* History Section */}
-      <section className="py-12 sm:py-16 lg:py-20 xl:py-24">
-        <div className="text-center space-y-4">
-          <h2 className={title()}>History</h2>
-          <p className="mx-auto max-w-2xl text-lg font-normal text-gray-700 lg:text-xl lg:leading-8">
-            How it all started
-          </p>
-        </div>
-        <ul className="mx-auto mt-8 grid max-w-md grid-cols-1 gap-10 lg:max-w-7xl lg:grid-cols-3">
-          {historySection.map(({ description, image, year }, index) => (
-            <li
-              key={index}
-              className="flex-start group relative flex items-start lg:items-center lg:flex-col"
-            >
-              {index < historySection.length - 1 && (
-                <span
-                  className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-2/3 lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
-                  aria-hidden="true"
-                ></span>
-              )}
-              <div className="inline-flex p-2 shrink-0 items-center justify-center border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:text-white group-hover:border-gray-900 group-hover:bg-gray-900">
-                {year}
-              </div>
-              <div className="ml-6 lg:ml-0 lg:mt-10">
-                <div className="relative w-full h-64">
-                  <Image
-                    src={image}
-                    alt={`${year} image`}
-                    className="object-cover"
-                    fill
-                  />
-                </div>
-                <h4 className="mt-2 text-base text-gray-700 text-justify">
-                  {description}
-                </h4>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Mission and Vision Section */}
-      <section className="text-center">
-        <h2 className={title()}>Mission & Vision</h2>
-
-        <div className="text-left grid grid-cols-1 mt-6 lg:grid-cols-2 gap-8">
-          <div className="my-auto relative w-full h-64 sm:h-96">
-            <Image
-              src={missionVisionSection.image}
-              alt="Mission and Vision Statements"
-              className="object-cover"
-              fill
-            />
+        <div className="max-w-7xl mx-auto xl:pr-64 flex flex-col justify-center items-center text-center sm:items-start sm:text-left">
+          <h2 className="text-3xl font-bold mb-4">{aboutSection.title}</h2>
+          <div className="space-y-2 max-w-xl text-md sm:text-lg">
+            {aboutSection.description}
           </div>
-          <div className="my-auto">
-            {/* Mission */}
-            <div className="p-6">
-              <h3 className="text-2xl font-bold mb-4">
-                {missionVisionSection.mission.title}
-              </h3>
-              <p className="text-base text-gray-700 whitespace-pre-wrap">
-                {missionVisionSection.mission.description}
-              </p>
+        </div>
+      </section>
+
+      {/* Our Mission Section */}
+      <section className="px-6 py-16 bg-primary text-white lg:px-0">
+        <div className="max-w-7xl mx-auto flex justify-center gap-4 items-center flex-col md:flex-row">
+          <Image
+            src={ourMissionSection.image.src}
+            alt={ourMissionSection.image.alt}
+            height={600}
+            width={600}
+          />
+          <div className="mx-auto flex flex-col items-center sm:items-start justify-center">
+            <h2 className="text-3xl font-bold mb-4">
+              {ourMissionSection.title}
+            </h2>
+            <div className="space-y-2 max-w-xl text-md sm:text-lg">
+              {ourMissionSection.description}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Story Section */}
+      <section className="px-6 py-16">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            {ourStorySection.title}
+          </h2>
+
+          <div className="flex flex-col-reverse xl:flex-row xl:items-start xl:gap-8">
+            {/* Text Content */}
+            <div className="flex-1 space-y-6 text-justify text-md sm:text-lg">
+              {ourStorySection.description}
             </div>
 
-            {/* Vision */}
-            <div className="p-6">
-              <h3 className="text-2xl font-bold mb-4">
-                {missionVisionSection.vision.title}
-              </h3>
-              <p className="text-base text-gray-700 whitespace-pre-wrap">
-                {missionVisionSection.vision.description}
+            {/* Image with Caption */}
+            <div className="mb-8 xl:mt-0 xl:w-1/3 shrink-0">
+              <Image
+                src={ourStorySection.image.src}
+                alt={ourStorySection.image.alt}
+                width={400}
+                height={400}
+                className="w-full h-auto object-cover"
+              />
+              <p className="italic text-xs text-center mt-2">
+                {ourStorySection.image.alt}
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <iframe
-          title="Google Map of Showroom"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.3359262947624!2d120.9597180758399!3d14.693585385803884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b474fc539e29%3A0x9299ac596b70063c!2sFozzini%20Lifestyle%20Concepts%2C%20Inc.!5e0!3m2!1sen!2sph!4v1744516658667!5m2!1sen!2sph"
-          width="100%"
-          height="400"
-          allowFullScreen=""
-          loading="lazy"
-          style={{ border: 0 }}
-        ></iframe>
+      {/* Our Philosophy Section */}
+      <section className="px-6 py-16 bg-primary text-white lg:px-0">
+        <div className="max-w-7xl mx-auto flex justify-center gap-4 items-center flex-col md:flex-row">
+          <div className="mx-auto flex flex-col items-center sm:items-start justify-center">
+            <h2 className="text-3xl font-bold mb-4">
+              {ourPhilosophySection.title}
+            </h2>
+            <div className="space-y-2 max-w-xl text-md sm:text-lg">
+              {ourPhilosophySection.description}
+            </div>
+          </div>
+          <Image
+            src={ourPhilosophySection.image.src}
+            alt={ourPhilosophySection.image.alt}
+            height={600}
+            width={600}
+          />
+        </div>
+      </section>
+
+      {/* Our Location Section */}
+      <section className="px-6 py-16">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-10">
+            {ourLocationSection.title}
+          </h2>
+          <iframe
+            title="Google Map of Showroom"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.3359262947624!2d120.9597180758399!3d14.693585385803884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b474fc539e29%3A0x9299ac596b70063c!2sFozzini%20Lifestyle%20Concepts%2C%20Inc.!5e0!3m2!1sen!2sph!4v1744516658667!5m2!1sen!2sph"
+            width="100%"
+            height="400"
+            allowFullScreen=""
+            loading="lazy"
+            style={{ border: 0 }}
+          ></iframe>
+          <p>{ourLocationSection.description}</p>
+        </div>
       </section>
     </>
   );
