@@ -2,20 +2,20 @@ import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
 
-import { BRANDS } from "@/data";
+import { PRODUCTS } from "@/data";
 import { title } from "@/components/primitives";
 import Gallery from "@/components/gallery";
 
 // Static paths generation
 export async function generateStaticParams() {
-  return BRANDS.map(({ slug }) => ({
+  return PRODUCTS.map(({ slug }) => ({
     brand: slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
   const { brand } = await params;
-  const brandData = BRANDS.find((b) => b.slug === brand);
+  const brandData = PRODUCTS.find((b) => b.slug === brand);
   if (!brandData) return notFound();
 
   return {
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
       description: brandData.description,
       url: `https://kassidinc.com/brands/${brandData.slug}`,
       siteName: "Kassi Distributors Inc.",
-      images: [brandData.logo.src],
+      images: [brandData.thumbnail.src],
       type: "website",
     },
   };
@@ -37,7 +37,7 @@ export default async function BrandItemPage({ params }) {
   const { brand } = await params;
 
   // Find the brand data by slug
-  const brandData = BRANDS.find((b) => b.slug === brand);
+  const brandData = PRODUCTS.find((b) => b.slug === brand);
 
   if (!brandData) {
     return (
@@ -58,7 +58,8 @@ export default async function BrandItemPage({ params }) {
     );
   }
 
-  const { name, logo, description, catalogue, comingSoon, gallery } = brandData;
+  const { name, thumbnail, description, catalogue, comingSoon, gallery } =
+    brandData;
 
   return (
     <>
@@ -67,8 +68,8 @@ export default async function BrandItemPage({ params }) {
         <section className="flex justify-center items-center p-4 relative bg-gray-100 flex-col lg:gap-8 lg:flex-row sm:p-12">
           <div className="relative h-48 md:h-64 w-screen">
             <Image
-              src={logo.src}
-              alt={logo.alt}
+              src={thumbnail.src}
+              alt={thumbnail.alt}
               className="object-contain"
               fill
             />
@@ -103,8 +104,8 @@ export default async function BrandItemPage({ params }) {
         <section className="min-h-[50vh] flex flex-col justify-center items-center my-auto">
           <div className="relative h-48 md:h-64 w-64">
             <Image
-              src={logo.src}
-              alt={logo.alt}
+              src={thumbnail.src}
+              alt={thumbnail.alt}
               className="object-contain"
               fill
             />

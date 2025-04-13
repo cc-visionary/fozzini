@@ -38,15 +38,16 @@ export const HOME = {
       </Button>
     ),
   },
-  brandSection: PRODUCTS.map(({ slug, name, logo, description }) => ({
+  productSection: PRODUCTS.map(({ slug, name, thumbnail, excerpt }) => ({
     name: name,
-    logo,
-    description,
-    href: `/brands/${slug}`,
+    thumbnail,
+    excerpt,
+    href: `/products/${slug}`,
   })),
   aboutSection: {
     title: "About Us",
-    description: ABOUT.aboutSection.description,
+    description:
+      "Fozzini aims to be a globally competitive provider of high-caliber modular cabinetry and furniture.",
     image: "/gallery/Home/About.webp",
     alt: "About Fozzini Lifestyle Concepts",
     cta: "Learn More",
@@ -57,7 +58,7 @@ export const HOME = {
     description: CONTACT.subheading,
     image: "/gallery/Home/Contact.jpg",
     alt: "Contact Fozzini Lifestyle Concepts",
-    cta: "Contact",
+    cta: "Send us a Message",
     link: "/contact",
   },
 };

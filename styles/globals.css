@@ -50,3 +50,7 @@ a,
 .badge {
   border-radius: 10px;
 } */
+
+.rounded-large {
+  border-radius: 0px !important;
+}

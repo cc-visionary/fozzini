@@ -1,19 +1,19 @@
 import { Card } from "@/components/card";
 import { title } from "@/components/primitives";
-import { BRANDS } from "@/data";
+import { PRODUCTS } from "@/data";
 
-export default function BrandsListPage() {
+export default function ProductsListPage() {
   return (
     <div>
-      <h1 className={title()}>Our Partners</h1>
+      <h1 className={title()}>Our Products</h1>
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {BRANDS.map(({ name, logo, slug, description }, index) => (
+        {PRODUCTS.map(({ name, thumbnail, slug, excerpt }, index) => (
           <Card
             key={index}
             link={`/brands/${slug}`}
-            image={logo.src}
+            image={thumbnail.src}
             title={name}
-            excerpt={description}
+            excerpt={excerpt}
             contain
           />
         ))}

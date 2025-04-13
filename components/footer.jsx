@@ -16,21 +16,22 @@ export const Footer = () => {
   } = FOOTER;
 
   return (
-    <footer className="bg-gray-100">
-      <div className="py-6 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* Column 1: Company Info */}
-        <div>
-          <Image
-            width={200}
-            height={75}
-            src={logo.src}
-            alt={logo.alt}
-            className="object-contain"
-          />
-        </div>
+    <footer className="bg-primary text-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="py-6 px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Column 1: Company Info */}
+          <div className="flex sm:justify-end items-center sm:border-r-2 sm:border-r-white sm:pr-8">
+            <Image
+              width={200}
+              height={75}
+              src={logo.src}
+              alt={logo.alt}
+              className="object-contain"
+            />
+          </div>
 
-        {/* Column 2: Quick Links  */}
-        <div>
+          {/* Column 2: Quick Links  */}
+          {/* <div>
           <h4 className="font-bold text-lg mb-4">Quick Links</h4>
           <ul className="mb-6">
             {quickLinks.map(
@@ -42,9 +43,9 @@ export const Footer = () => {
                 )
             )}
           </ul>
-        </div>
-        {/* Column 3: Showrooms */}
-        <div>
+        </div> */}
+          {/* Column 3: Showrooms */}
+          {/* <div>
           <h4 className="font-bold text-lg mb-4">Showroom Locations</h4>
           <ul>
             {showroomAddresses.map(
@@ -59,42 +60,46 @@ export const Footer = () => {
               )
             )}
           </ul>
-        </div>
+        </div> */}
 
-        {/* Column 4: Contact Info & Social Links */}
-        <div>
-          <h4 className="font-bold text-lg mb-4">Contact Us</h4>
-          <p className="mb-2">
-            <strong>Email:</strong>{" "}
-            <Link href={`mailto:${contactInformation.email}`}>
-              {contactInformation.email}
-            </Link>
-          </p>
-          <p className="mb-2">
-            <strong>Telephone:</strong>{" "}
-            <Link href={`tel:${FOOTER.contactInformation.telephone}`}>
-              {FOOTER.contactInformation.telephone}
-            </Link>
-          </p>
-          <p className="mb-6">
-            <strong>Phone:</strong>{" "}
-            <Link href={`tel:${FOOTER.contactInformation.phone}`}>
-              {FOOTER.contactInformation.phone}
-            </Link>
-          </p>
-          <h4 className="font-bold text-lg mb-4">Follow Us</h4>
-          <div className="flex space-x-4">
-            {socialLinks.map(({ icon, alt, link }, index) => (
+          {/* Column 4: Contact Info & Social Links */}
+          <div>
+            <h4 className="font-bold text-lg mb-4">Contact Us</h4>
+            <p className="mb-2">
+              <strong>Email:</strong>{" "}
               <Link
-                key={index}
-                href={link}
-                aria-label={alt}
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-                isExternal
+                className="text-white"
+                href={`mailto:${contactInformation.email}`}
               >
-                {icon}
+                {contactInformation.email}
               </Link>
-            ))}
+            </p>
+            <p className="mb-2">
+              <strong>Telephone:</strong>{" "}
+              <Link
+                className="text-white"
+                href={`tel:${FOOTER.contactInformation.telephone}`}
+              >
+                {FOOTER.contactInformation.telephone}
+              </Link>
+            </p>
+            <p className="mb-6">
+              <strong>Phone:</strong>{" "}
+              <Link
+                className="text-white"
+                href={`tel:${FOOTER.contactInformation.phone}`}
+              >
+                {FOOTER.contactInformation.phone}
+              </Link>
+            </p>
+            <h4 className="font-bold text-lg mb-4">Follow Us</h4>
+            <div className="flex space-x-4">
+              {socialLinks.map(({ icon, alt, link }, index) => (
+                <Link key={index} href={link} aria-label={alt} isExternal>
+                  {icon}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -166,6 +166,18 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section>
+        <iframe
+          title="Google Map of Showroom"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.3359262947624!2d120.9597180758399!3d14.693585385803884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b474fc539e29%3A0x9299ac596b70063c!2sFozzini%20Lifestyle%20Concepts%2C%20Inc.!5e0!3m2!1sen!2sph!4v1744516658667!5m2!1sen!2sph"
+          width="100%"
+          height="400"
+          allowFullScreen=""
+          loading="lazy"
+          style={{ border: 0 }}
+        ></iframe>
+      </section>
     </>
   );
 }

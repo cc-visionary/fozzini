@@ -89,23 +89,14 @@ export const Navbar = () => {
                         base: "gap-4",
                       }}
                     >
-                      {subcategories.map(({ label, logo, link }) => (
+                      {subcategories.map(({ label, link }) => (
                         <DropdownItem
                           key={link}
                           // description={description}
                           className={
-                            "text-white data-[active=true]:text-primary data-[active=true]:font-medium"
+                            "rounded-none data-[active=true]:text-primary data-[active=true]:font-medium"
                           }
                           as={Link}
-                          startContent={
-                            <Image
-                              height={25}
-                              width={50}
-                              className="object-contain"
-                              src={logo.src}
-                              alt={logo.alt}
-                            />
-                          }
                           href={link}
                         >
                           {label}
@@ -155,7 +146,7 @@ export const Navbar = () => {
                       classNames={{ title: "text-lg font-bold" }}
                     >
                       <div className="flex flex-col gap-4">
-                        {subcategories.map(({ label, logo, link }) => (
+                        {subcategories.map(({ label, link }) => (
                           <Link
                             key={link}
                             className={clsx(
@@ -165,13 +156,6 @@ export const Navbar = () => {
                             onPress={() => setIsMenuOpen(false)}
                             href={link}
                           >
-                            <Image
-                              height={25}
-                              width={50}
-                              className="object-contain"
-                              src={logo.src}
-                              alt={logo.alt}
-                            />
                             <span>{label}</span>
                           </Link>
                         ))}

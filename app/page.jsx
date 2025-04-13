@@ -12,7 +12,7 @@ import { title, subtitle } from "@/components/primitives";
 import clsx from "clsx";
 
 export default function HomePage() {
-  const { heroSection, brandSection, aboutSection, contactSection } = HOME;
+  const { heroSection, productSection, aboutSection, contactSection } = HOME;
 
   return (
     <>
@@ -68,83 +68,67 @@ export default function HomePage() {
         </Swiper>
       </section>
 
-      {/* Brands Section */}
-      <section className="px-6 py-12">
+      {/* Products Section */}
+      <section className="max-w-3xl px-6 lg:px-0 py-12 mx-auto text-center mt-8">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Companies we've worked with
-          </h2>
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {brandSection.map(({ name, logo, href, description }, index) => (
+          <div className="max-w-lg mx-auto">
+            <h2 className="text-3xl font-bold">Our Products</h2>
+            <p>
+              Browse through our selection of modular cabinetry and spark ideas
+              to inspire your own home design, built with style for your
+              comfort.
+            </p>
+          </div>
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {productSection.map(({ name, thumbnail, href, excerpt }, index) => (
               <Card
                 key={index}
                 link={href}
-                image={logo.src}
+                image={thumbnail.src}
                 title={name}
-                excerpt={description}
-                contain
+                excerpt={excerpt}
               />
             ))}
           </div>
-          {brandSection.length > 3 ? (
-            <div className="text-center mt-8">
-              <Button
-                as={Link}
-                href="/brands"
-                color="primary"
-                variant="solid"
-                size="lg"
-              >
-                View All Brands
-              </Button>
-            </div>
-          ) : (
-            <></>
-          )}
         </div>
       </section>
 
       {/* About Us Section */}
-      <section className="px-6 py-12 flex justify-center gap-4 items-center flex-col-reverse bg-white text-center md:flex-row">
-        <div className="mx-auto flex flex-col items-center justify-center">
-          <h2 className="text-3xl font-bold mb-4">{aboutSection.title}</h2>
-          <div className="space-y-2 max-w-xl text-sm text-justify sm:text-md">
-            {aboutSection.description}
+      <section className="px-6 py-16 bg-primary text-white lg:px-0">
+        <div className="max-w-3xl mx-auto flex justify-center gap-4 items-center flex-col md:flex-row">
+          <Image
+            src={aboutSection.image}
+            alt={aboutSection.alt}
+            height={400}
+            width={400}
+          />
+          <div className="mx-auto flex flex-col items-center sm:items-start justify-center">
+            <h2 className="text-3xl font-bold mb-4">{aboutSection.title}</h2>
+            <div className="space-y-2 max-w-xl text-sm sm:text-md">
+              {aboutSection.description}
+            </div>
+            <Button
+              as={Link}
+              className="mt-6 text-white rounded-none"
+              href={aboutSection.link}
+              variant="bordered"
+              size="lg"
+            >
+              {aboutSection.cta}
+            </Button>
           </div>
-          <Button
-            as={Link}
-            className="mt-6"
-            href={aboutSection.link}
-            color="primary"
-            variant="solid"
-            size="lg"
-          >
-            {aboutSection.cta}
-          </Button>
         </div>
-        <Image
-          src={aboutSection.image}
-          alt={aboutSection.alt}
-          height={400}
-          width={400}
-        />
       </section>
 
       {/* Contact Us Section */}
-      <section className="px-6 py-12 flex justify-center gap-4 items-center flex-col bg-white text-center md:flex-row">
-        <Image
-          src={contactSection.image}
-          alt={contactSection.alt}
-          height={400}
-          width={400}
-        />
-        <div className="mx-auto flex flex-col justify-center items-center">
+      <section className="max-w-3xl mx-auto px-6 py-12 flex justify-center gap-4 items-center flex-col-reverse bg-white md:flex-row lg:px-0">
+        <div className="mx-auto flex flex-col justify-center items-center text-center sm:items-end sm:text-right">
           <h2 className="text-3xl font-bold mb-4">{contactSection.title}</h2>
           <div className="space-y-2 max-w-xl text-sm sm:text-md">
             {contactSection.description}
           </div>
           <Button
-            className="mt-6"
+            className="mt-6 rounded-none"
             as={Link}
             href={contactSection.link}
             color="primary"
@@ -154,6 +138,12 @@ export default function HomePage() {
             {contactSection.cta}
           </Button>
         </div>
+        <Image
+          src={contactSection.image}
+          alt={contactSection.alt}
+          height={400}
+          width={400}
+        />
       </section>
     </>
   );

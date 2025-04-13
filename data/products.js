@@ -1,8 +1,13 @@
 export const PRODUCTS = [
   {
-    slug: "nolte-kitchen",
-    name: "Nolte Kitchen",
-    logo: { src: "/logos/Nolte Kitchen.png", alt: "Nolte Kitchen Logo" },
+    slug: "living-room",
+    name: "Living Room",
+    thumbnail: {
+      src: "/gallery/Home/Products_Living Room.jpg",
+      alt: "Living Room Thumbnail",
+    },
+    excerpt:
+      "Give life to your home’s common spaces by making use of stylish and practical cabinetry pieces.",
     description: (
       <>
         With Nolte Küchen, the kitchen transcends its functional role—it becomes
@@ -14,7 +19,6 @@ export const PRODUCTS = [
         and friends naturally come together.
       </>
     ),
-    catalogue: "/catalogues/NK31168_Kuechen_Journal_2024_GB.pdf",
     gallery: [
       {
         src: "/gallery/Brands/Nolte/WIDE0035-HDR.webp",
@@ -35,9 +39,14 @@ export const PRODUCTS = [
     ],
   },
   {
-    slug: "express-kitchen",
-    name: "Express Kitchen",
-    logo: { src: "/logos/Express Kitchen.png", alt: "Express Kitchen Logo" },
+    slug: "kitchen",
+    name: "Kitchen",
+    thumbnail: {
+      src: "/gallery/Home/Products_Kitchen.jpg",
+      alt: "Kitchen Thumbnail",
+    },
+    excerpt:
+      "Our modular kitchen cabinetry combines practicality and style in one go.",
     description: (
       <>
         A member of the Nolte Group, Express Küchen presents a dynamic and
@@ -50,7 +59,6 @@ export const PRODUCTS = [
         flair.
       </>
     ),
-    catalogue: "/catalogues/EK29460.pdf",
     gallery: [
       {
         src: "/gallery/Brands/Express/WIDE9820-HDR.webp",
@@ -63,10 +71,26 @@ export const PRODUCTS = [
     ],
   },
   {
-    comingSoon: true,
-    slug: "caccaro",
-    name: "Caccarro",
-    logo: { src: "/logos/Caccaro.png", alt: "Caccaro Logo" },
+    slug: "bedroom",
+    name: "Bedroom",
+    thumbnail: {
+      src: "/gallery/Home/Products_Bedroom.jpg",
+      alt: "Bedroom Thumbnail",
+    },
+    excerpt:
+      "Your bedroom is your sanctuary. Your preference, your style, your design.",
+    description: "Coming Soon",
+    catalogue: null,
+    gallery: [],
+  },
+  {
+    slug: "bathroom",
+    name: "Bathroom",
+    thumbnail: {
+      src: "/gallery/Home/Products_Bathroom.jpg",
+      alt: "Kitchen Thumbnail",
+    },
+    excerpt: "Maximizing your bathroom space is a necessary luxury.",
     description: "Coming Soon",
     catalogue: null,
     gallery: [],

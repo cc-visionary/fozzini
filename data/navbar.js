@@ -8,21 +8,16 @@ export const NAVBAR = {
   },
   links: [
     {
-      label: "Brands",
-      link: "/brands",
-      subcategories: PRODUCTS.map(({ slug, name, logo }) => ({
+      label: "Products",
+      link: "/products",
+      subcategories: PRODUCTS.map(({ slug, name }) => ({
         label: name,
-        logo,
-        link: `/brands/${slug}`,
+        link: `/products/${slug}`,
       })),
     },
     {
       label: "Projects",
       link: "/projects",
-    },
-    {
-      label: "Showroom",
-      link: "/showroom",
     },
     { label: "About Us", link: "/about" },
   ],
