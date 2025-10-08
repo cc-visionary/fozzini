@@ -1,4 +1,4 @@
-import { BLOGS, BRANDS } from "@/data";
+import { PRODUCTS } from "@/data";
 
 export default function sitemap() {
   const BASE_URL = process.env.DOMAIN_URL;
@@ -7,9 +7,7 @@ export default function sitemap() {
   const staticRoutes = [
     { route: "", changeFrequency: "weekly", priority: 0.8 },
     { route: "about", changeFrequency: "yearly", priority: 0.6 },
-    { route: "blogs", changeFrequency: "monthly", priority: 0.6 },
     { route: "contact", changeFrequency: "yearly", priority: 0.6 },
-    { route: "showroom", changeFrequency: "monthly", priority: 0.6 },
   ].map(({ route, changeFrequency, priority }) => ({
     url: `${BASE_URL}/${route}`,
     lastModified: new Date().toISOString(),
@@ -17,22 +15,14 @@ export default function sitemap() {
     priority,
   }));
 
-  // Blog routes
-  const blogRoutes = BLOGS.map((blog) => ({
-    url: `${BASE_URL}/blogs/${blog.slug}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "monthly",
-    priority: 0.6,
-  }));
-
   // Brand routes
-  const brandRoutes = BRANDS.map((brand) => ({
-    url: `${BASE_URL}/brands/${brand.slug}`,
+  const productRoutes = PRODUCTS.map((product) => ({
+    url: `${BASE_URL}/products/${product.slug}`,
     lastModified: new Date().toISOString(),
     changeFrequency: "monthly",
     priority: 0.6,
   }));
 
   // Combine all routes
-  return [...staticRoutes, ...blogRoutes, ...brandRoutes];
+  return [...staticRoutes, ...productRoutes];
 }

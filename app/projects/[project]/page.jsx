@@ -7,30 +7,30 @@ import { title } from "@/components/primitives";
 import { PROJECTS } from "@/data";
 
 // Static paths generation
-export async function generateStaticParams() {
-  return PROJECTS.map(({ slug }) => ({
-    project: slug,
-  }));
-}
+// export async function generateStaticParams() {
+//   return PROJECTS.map(({ slug }) => ({
+//     project: slug,
+//   }));
+// }
 
-export async function generateMetadata({ params }) {
-  const { project } = await params;
-  const projectData = PROJECTS.find((p) => p.slug === project);
-  if (!projectData) return notFound();
+// export async function generateMetadata({ params }) {
+//   const { project } = await params;
+//   const projectData = PROJECTS.find((p) => p.slug === project);
+//   if (!projectData) return notFound();
 
-  return {
-    title: `${projectData.projectTitle} | Explore ${projectData.projectTitle} Products & Designs`,
-    description: `${projectData.projectTitle} located at ${projectData.location}. Has a ${projectData.finish} finish and comes from the ${projectData.collection} collection.`,
-    openGraph: {
-      title: `${projectData.projectTitle}`,
-      description: `${projectData.projectTitle} located at ${projectData.location}. Has a ${projectData.finish} finish and comes from the ${projectData.collection} collection.`,
-      url: `https://fozzini.com/projects/${projectData.slug}`,
-      siteName: "Fozzini Lifestyle Inc.",
-      images: [projectData.coverImage],
-      type: "website",
-    },
-  };
-}
+//   return {
+//     title: `${projectData.projectTitle} | Explore ${projectData.projectTitle} Products & Designs`,
+//     description: `${projectData.projectTitle} located at ${projectData.location}. Has a ${projectData.finish} finish and comes from the ${projectData.collection} collection.`,
+//     openGraph: {
+//       title: `${projectData.projectTitle}`,
+//       description: `${projectData.projectTitle} located at ${projectData.location}. Has a ${projectData.finish} finish and comes from the ${projectData.collection} collection.`,
+//       url: `https://fozzini.com/projects/${projectData.slug}`,
+//       siteName: "Fozzini Lifestyle Inc.",
+//       images: [projectData.coverImage],
+//       type: "website",
+//     },
+//   };
+// }
 
 // Page Component
 export default async function ProjectItemPage({ params }) {
