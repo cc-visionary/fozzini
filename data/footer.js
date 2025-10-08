@@ -1,8 +1,9 @@
 export const FOOTER = {
   companyName: "Fozzini Lifestyle Concepts Inc.",
   logo: {
-    src: "/logos/KDI Official Logo Files_KDI Official Logo.png",
-    alt: "Kassi Distributions Inc. Logo with Text",
+    src: "/gallery/Fozzini Logo.png",
+    alt: "Fozzini Lifestyle Concepts Logo Mark",
+    link: "/",
   },
   quickLinks: [
     // {
@@ -20,16 +21,16 @@ export const FOOTER = {
     {
       name: "Main Showroom",
       address:
-        "7646 Guijo Street, San Antonio Village, Makati, 1203 Metro Manila",
-      googleMaps: "https://maps.app.goo.gl/K8Rh1ZnP5xt6CnR6A",
+        "22 Rincon Road, Malinta, 1440, Valenzuela City, Metro Manila, Philippines",
+      googleMaps: "https://maps.app.goo.gl/DuSxTUrdJwG67evGA",
       embedMaps:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.7987473256312!2d121.01282339999999!3d14.564995199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9a079973353%3A0xe135b8071a27f513!2s7646%20Guijo%2C%20Makati%2C%201203%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1736960182680!5m2!1sen!2sph",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.3359262947624!2d120.9597180758399!3d14.693585385803884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b474fc539e29%3A0x9299ac596b70063c!2sFozzini%20Lifestyle%20Concepts%2C%20Inc.!5e0!3m2!1sen!2sph!4v1744516658667!5m2!1sen!2sph",
       openingHours: "Monday to Saturday (9:00am to 6:00pm)",
       phones: ["+63 2 8807 5238", "+63 966 806 8999"],
     },
   ],
   contactInformation: {
-    email: "info@kassidinc.com",
+    email: "fozzinidesign@gmail.com",
     telephone: "+63 2 8807 5238",
     phone: "+63 966 806 8999",
   },
@@ -46,7 +47,7 @@ export const FOOTER = {
         </svg>
       ),
       alt: "Facebook",
-      link: "https://www.facebook.com/noltekuchenph",
+      link: "https://www.facebook.com/fozziniconcepts",
     },
     {
       icon: (
@@ -60,7 +61,7 @@ export const FOOTER = {
         </svg>
       ),
       alt: "Instagram",
-      link: "https://www.instagram.com/nolteph_official/?hl=en",
+      link: "https://www.instagram.com/fozziniconcepts",
     },
     {
       icon: (

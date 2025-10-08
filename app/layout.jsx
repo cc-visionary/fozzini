@@ -15,30 +15,30 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata = {
-  title: "Kassi Distributors Inc.",
+  title: "Fozzini Lifestyle Inc.",
   description:
-    "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+    "Discover how Fozzini Lifestyle Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
   openGraph: {
-    title: "Kassi Distributors Inc.",
+    title: "Fozzini Lifestyle Inc.",
     type: "website",
     description:
-      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+      "Discover how Fozzini Lifestyle Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
     images: [
       {
         url: `${process.env.DOMAIN_URL}/gallery/Home/Hero_HomePage1_Desktop.webp`,
-        alt: "Kassi Distributors Inc. Showroom",
+        alt: "Fozzini Lifestyle Inc. Showroom",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kassi Distributors Inc.",
+    title: "Fozzini Lifestyle Inc.",
     description:
-      "Discover how Kassi Distributors Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+      "Discover how Fozzini Lifestyle Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
     images: [
       {
         url: `${process.env.DOMAIN_URL}/gallery/Home/Hero_HomePage1_Desktop.webp`,
-        alt: "Kassi Distributors Inc. Showroom",
+        alt: "Fozzini Lifestyle Inc. Showroom",
       },
     ],
   },

@@ -52,6 +52,8 @@ export default function ContactPage() {
           name="name"
           label="Name"
           placeholder="Enter your name"
+          radius="none"
+          variant="bordered"
           isRequired
           validate={(value) => {
             if (value.trim().length < 3) {
@@ -64,6 +66,8 @@ export default function ContactPage() {
           name="email"
           label="Email Address"
           placeholder="Enter your email"
+          radius="none"
+          variant="bordered"
           isRequired
           type="email"
           validate={(value) => {
@@ -77,6 +81,8 @@ export default function ContactPage() {
           name="phone"
           label="Phone Number"
           placeholder="Enter your phone number"
+          radius="none"
+          variant="bordered"
           isRequired
           validate={(value) => {
             if (value && !/^\d{10,15}$/.test(value)) {
@@ -89,12 +95,16 @@ export default function ContactPage() {
           name="projectAddress"
           label="Project Address"
           placeholder="Enter your project address"
+          radius="none"
+          variant="bordered"
         />
         <Select
           name="inquiry"
           label="Inquire About"
           isRequired
           placeholder="Select an option"
+          radius="none"
+          variant="bordered"
           validate={(value) => {
             if (!value) {
               return "Inquiry type is required";
@@ -111,6 +121,8 @@ export default function ContactPage() {
           label="Showroom"
           isRequired
           placeholder="Select a showroom"
+          radius="none"
+          variant="bordered"
           validate={(value) => {
             if (!value) {
               return "Showroom selection is required";
@@ -126,6 +138,8 @@ export default function ContactPage() {
           name="message"
           label="Message"
           placeholder="Enter your message"
+          radius="none"
+          variant="bordered"
           isRequired
           minRows={4}
           validate={(value) => {
@@ -140,7 +154,7 @@ export default function ContactPage() {
           type="submit"
           color="primary"
           isLoading={loading}
-          className="col-span-1 sm:col-span-2"
+          className="col-span-1 sm:col-span-2 rounded-none"
         >
           Submit
         </Button>

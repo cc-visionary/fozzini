@@ -38,19 +38,6 @@
   transition: all 0.25s;
 }
 
-/* Global Reset for Border Radius */
-/* img,
-button,
-input,
-textarea,
-a,
-.card,
-.select,
-.alert,
-.badge {
-  border-radius: 10px;
-} */
-
 .rounded-large {
   border-radius: 0px !important;
 }

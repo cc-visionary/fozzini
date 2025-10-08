@@ -44,23 +44,6 @@ export const Footer = () => {
             )}
           </ul>
         </div> */}
-          {/* Column 3: Showrooms */}
-          {/* <div>
-          <h4 className="font-bold text-lg mb-4">Showroom Locations</h4>
-          <ul>
-            {showroomAddresses.map(
-              ({ name, openingHours, address, googleMaps }, index) => (
-                <li key={index} className="mb-2">
-                  <p className="font-semibold">{name}</p>
-                  <p className="font-light text-sm">{openingHours}</p>
-                  <Link href={googleMaps} isExternal>
-                    {address}
-                  </Link>
-                </li>
-              )
-            )}
-          </ul>
-        </div> */}
 
           {/* Column 4: Contact Info & Social Links */}
           <div>

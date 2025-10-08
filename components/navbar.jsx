@@ -39,7 +39,7 @@ export const Navbar = () => {
         onMenuOpenChange={setIsMenuOpen}
         maxWidth="full"
         position="sticky"
-        className="bg-primary max-w-7xl mx-auto"
+        className="bg-primary max-w-7xl mx-auto my-4"
       >
         <NavbarContent>
           <NavbarMenuToggle
@@ -73,7 +73,7 @@ export const Navbar = () => {
                         <Button
                           disableRipple
                           className={
-                            "rounded-none text-white data-[active=true]:text-primary data-[active=true]:font-medium"
+                            "rounded-none text-white text-lg data-[active=true]:text-primary data-[active=true]:font-medium"
                           }
                           endContent={<ChevronDown size={16} />}
                           radius="sm"
@@ -109,7 +109,7 @@ export const Navbar = () => {
                     <Button
                       as={Link}
                       className={
-                        "text-white rounded-none h-10 data-[active=true]:text-primary data-[active=true]:font-medium"
+                        "text-white text-lg rounded-none h-10 data-[active=true]:text-primary data-[active=true]:font-medium"
                       }
                       variant="light"
                       href={link}
@@ -126,7 +126,7 @@ export const Navbar = () => {
               href="/contact"
               color="primary"
               variant="bordered"
-              className="text-white border-white rounded-none"
+              className="text-white text-lg border-white rounded-none"
             >
               Contact Us
             </Button>

@@ -2,8 +2,8 @@ import { PRODUCTS } from "./products";
 
 export const NAVBAR = {
   logo: {
-    src: "/logos/KDI Official Logo Files_KDI Official Logo.png",
-    alt: "Kassi Distributors Inc. Logo Mark",
+    src: "/gallery/Fozzini Logo.png",
+    alt: "Fozzini Lifestyle Concepts Logo Mark",
     link: "/",
   },
   links: [
