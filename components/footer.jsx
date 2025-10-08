@@ -47,7 +47,7 @@ export const Footer = () => {
 
           {/* Column 4: Contact Info & Social Links */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Contact Us</h4>
+            <h3 className="font-black text-lg mb-4">Contact Us</h3>
             <p className="mb-2">
               <strong>Email:</strong>{" "}
               <Link

@@ -1,11 +1,13 @@
-import { Fira_Code as FontMono, DM_Sans as FontSans } from "next/font/google";
+import localFont from "next/font/local";
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
+export const gothicA1 = localFont({
+  src: "./GothicA1-Regular.ttf",
+  display: "swap",
+  variable: "--font-gothic-a1",
 });
 
-export const fontMono = FontMono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+export const myanmar = localFont({
+  src: "./myanmar-mn.ttf",
+  display: "swap",
+  variable: "--font-myanmar",
 });

@@ -10,8 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        mono: ["var(--font-mono)"],
+        gothic: ['var(--font-gothic-a1)'],
+        myanmar: ['var(--font-myanmar)'],
       },
     },
   },

@@ -48,10 +48,10 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center text-center text-white">
                 <div className="container mx-16 lg:mx-auto max-w-4xl space-y-4">
                   <div>
-                    <p className="text-white text-lg lg:text-4xl">
+                    <p className="text-white text-lg lg:text-2xl font-bold">
                       {heroSection.subheading}
                     </p>
-                    <h2 className="py-8 text-white text-4xl lg:text-[4rem] font-bold">
+                    <h2 className="py-8 text-white font-myanmar text-4xl lg:text-[4rem] font-bold">
                       {heroSection.heading}
                     </h2>
                   </div>

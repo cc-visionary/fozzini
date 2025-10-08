@@ -10,7 +10,7 @@ import clsx from "clsx";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Providers } from "./providers";
 
-import { fontSans } from "@/config/fonts";
+import { gothicA1, myanmar } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -60,8 +60,9 @@ export default function RootLayout({ children }) {
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          "min-h-screen bg-background font-gothic antialiased",
+          gothicA1.variable,
+          myanmar.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>

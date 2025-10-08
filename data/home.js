@@ -6,8 +6,8 @@ import { Button } from "@nextui-org/button";
 
 export const HOME = {
   heroSection: {
-    heading: "Live in Comfort",
-    subheading: "Built in Style,",
+    heading: "LIVE IN COMFORT",
+    subheading: "BUILT IN STYLE,",
     introduction: ABOUT.aboutSection.description,
     images: [
       {
