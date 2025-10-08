@@ -12,7 +12,7 @@ export async function generateMetadata() {
       title: "About Us | Fozzini Lifestyle Concepts",
       description:
         "Discover Fozzini Lifestyle Concepts—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
-      url: "https://kassidinc.com/about",
+      url: "https://fozzini.com/about",
       siteName: "Fozzini Lifestyle Concepts",
       images: [
         {
@@ -32,7 +32,7 @@ export async function generateMetadata() {
       images: ["/gallery/About Us/AboutCover.jpg"],
     },
     alternates: {
-      canonical: "https://kassidinc.com/about",
+      canonical: "https://fozzini.com/about",
     },
   };
 }

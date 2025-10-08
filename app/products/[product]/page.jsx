@@ -23,8 +23,8 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${productData.name}`,
       description: productData.description,
-      url: `https://kassidinc.com/brands/${productData.slug}`,
-      siteName: "Kassi Distributors Inc.",
+      url: `https://fozzini.com/products/${productData.slug}`,
+      siteName: "Fozzini Lifestyle Inc.",
       images: [productData.thumbnail.src],
       type: "website",
     },
@@ -87,10 +87,10 @@ export default async function BrandItemPage({ params }) {
 
       {/* Gallery Section */}
       <section className="px-6 bg-primary text-white lg:px-0">
-        <div className="max-w-3xl mx-auto flex justify-center gap-4 items-center flex-col md:flex-row">
+        <div className="max-w-4xl mx-auto flex justify-center gap-4 items-center flex-col md:flex-row">
           <Carousel
             images={gallery}
-            sizeClass="h-[40rem] w-[24rem]"
+            sizeClass="h-[40rem] w-[35rem]"
             height={1920}
             width={1080}
           />
@@ -101,7 +101,7 @@ export default async function BrandItemPage({ params }) {
       </section>
 
       {/* Selling Point Section */}
-      <section className="relative h-[50vh] px-6 py-12 flex justify-center gap-4 items-center lg:px-0">
+      <section className="relative h-[40vh] px-6 py-12 flex justify-center gap-4 items-center lg:px-0">
         <div className="absolute right-0 top-0 h-full w-1/3 hidden xl:block z-0 pointer-events-none">
           <div
             className="h-full w-full bg-no-repeat bg-right"

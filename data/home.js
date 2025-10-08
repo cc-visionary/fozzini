@@ -47,7 +47,7 @@ export const HOME = {
     title: "About Us",
     description:
       "Fozzini aims to be a globally competitive provider of high-caliber modular cabinetry and furniture.",
-    image: "/gallery/Home/About.webp",
+    image: "/gallery/Home/AboutUs.jpg",
     alt: "About Fozzini Lifestyle Concepts",
     cta: "Learn More",
     link: "/about",

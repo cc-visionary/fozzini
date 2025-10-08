@@ -24,8 +24,8 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${projectData.projectTitle}`,
       description: `${projectData.projectTitle} located at ${projectData.location}. Has a ${projectData.finish} finish and comes from the ${projectData.collection} collection.`,
-      url: `https://kassidinc.com/projects/${projectData.slug}`,
-      siteName: "Kassi Distributors Inc.",
+      url: `https://fozzini.com/projects/${projectData.slug}`,
+      siteName: "Fozzini Lifestyle Inc.",
       images: [projectData.coverImage],
       type: "website",
     },
