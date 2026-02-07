@@ -8,8 +8,8 @@ export const ABOUT = {
     description: (
       <>
         <p>
-          Here at Fozzini Lifestyle Concepts, Inc., we believe that living in
-          comfort can go hand-in-hand with sophistication and style. We produce
+          Here at Fozzini Lifestyles Concepts, Inc., Inc. we believe that living
+          in comfort and hand-in-hand with sophistication and style. We produce
           and customize high-calibur modular cabinetry that fits your preference
           and lifestyle.
         </p>

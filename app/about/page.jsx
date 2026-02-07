@@ -49,24 +49,6 @@ export default function AboutPage() {
 
   return (
     <>
-      <div className="relative h-[50vh]">
-        <Image
-          src={coverImage.src}
-          alt={coverImage.alt}
-          className="object-cover"
-          fill
-        />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-center text-white">
-          <Image
-            width={400}
-            height={150}
-            src="/gallery/Fozzini Logo.png"
-            alt="Fozzini Lifestyle Concepts Logo Mark"
-            className="object-contain transform transition hover:scale-105"
-          />
-        </div>
-      </div>
-
       {/* About Section */}
       <section className="relative h-[40vh] px-6 py-12 flex justify-center gap-4 items-center lg:px-0">
         <div className="absolute right-0 top-0 h-full w-1/3 hidden xl:block z-0 pointer-events-none">

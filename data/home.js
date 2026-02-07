@@ -7,7 +7,7 @@ import { Button } from "@nextui-org/button";
 export const HOME = {
   heroSection: {
     heading: "LIVE IN COMFORT",
-    subheading: "BUILT IN STYLE,",
+    subheading: "BUILT WITH STYLE,",
     introduction: ABOUT.aboutSection.description,
     images: [
       {
@@ -24,6 +24,11 @@ export const HOME = {
         desktopSrc: "/gallery/Home/Hero3.jpg",
         mobileSrc: "/gallery/Home/Hero3.jpg",
         alt: "Fozzini Lifestyle Concepts Gallery 3",
+      },
+      {
+        desktopSrc: "/gallery/Home/Hero4.jpg",
+        mobileSrc: "/gallery/Home/Hero4.jpg",
+        alt: "Fozzini Lifestyle Concepts Gallery 4",
       },
     ],
     callToAction: (

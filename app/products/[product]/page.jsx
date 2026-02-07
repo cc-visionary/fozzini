@@ -65,6 +65,8 @@ export default async function BrandItemPage({ params }) {
       <Carousel
         images={covers}
         sizeClass="w-full h-[30vh] md:h-[40vh] lg:h-[50vh]"
+        width={3072}
+        height={872}
       />
 
       {/* Description Section */}

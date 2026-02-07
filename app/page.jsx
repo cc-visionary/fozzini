@@ -34,30 +34,31 @@ export default function HomePage() {
                 alt={image.alt}
                 loading="eager"
                 className="object-cover object-bottom hidden w-screen h-[80vh] lg:h-[100vh] md:block"
-                height={1920}
-                width={1080}
+                height={3840}
+                width={2048}
               />
               <Image
                 src={image.mobileSrc}
                 alt={image.alt}
                 loading="eager"
                 className="object-cover object-bottom w-screen h-[80vh] lg:h-[100vh] md:hidden"
-                height={1080}
-                width={1920}
+                height={2048}
+                width={3840}
               />
               <div className="absolute inset-0 bg-black/30 flex items-center justify-center text-center text-white">
                 <div className="container mx-16 lg:mx-auto max-w-4xl space-y-4">
                   <div>
-                    <p className="text-white text-lg lg:text-2xl font-bold">
+                    <p className="text-white text-2xl font-bold">
                       {heroSection.subheading}
                     </p>
-                    <h2 className="py-8 text-white font-myanmar text-4xl lg:text-[4rem] font-bold">
+                    <h2 className="py-8 text-white font-myanmar text-5xl lg:text-[4rem] font-bold">
                       {heroSection.heading}
                     </h2>
                   </div>
-                  <div className="space-y-2 text-sm lg:text-xl">
+                  <div className="space-y-2 text-lg lg:text-xl">
                     {heroSection.introduction}
                   </div>
+                  <br />
                   {heroSection.callToAction}
                 </div>
               </div>

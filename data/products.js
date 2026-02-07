@@ -34,10 +34,6 @@ export const PRODUCTS = [
         src: "/gallery/Products/LivingRoom/LivingRoomCover2.jpg",
         caption: "Living Room Setup 2",
       },
-      {
-        src: "/gallery/Products/LivingRoom/LivingRoomCover3.jpg",
-        caption: "Living Room Setup 3",
-      },
     ],
     gallery: [
       {
@@ -49,7 +45,7 @@ export const PRODUCTS = [
         caption: "Living Room Cabinet 2",
       },
       {
-        src: "/gallery/Products/LivingRoom/ModularCabinet3.jpg",
+        src: "/gallery/Products/LivingRoom/ModularCabinet3.png",
         caption: "Living Room Cabinet 3",
       },
     ],
@@ -96,10 +92,6 @@ export const PRODUCTS = [
         src: "/gallery/Products/Kitchen/KitchenCover4.jpg",
         caption: "Kitchen Setup 4",
       },
-      {
-        src: "/gallery/Products/Kitchen/KitchenCover5.jpg",
-        caption: "Kitchen Setup 5",
-      },
     ],
     gallery: [
       {
@@ -118,17 +110,13 @@ export const PRODUCTS = [
         src: "/gallery/Products/Kitchen/ModularCabinet4.jpg",
         caption: "Kitchen Cabinet 4",
       },
-      {
-        src: "/gallery/Products/Kitchen/ModularCabinet5.jpg",
-        caption: "Kitchen Cabinet 5",
-      },
     ],
   },
   {
     slug: "bedroom",
     name: "Bedroom",
     thumbnail: {
-      src: "/gallery/Home/Products_Bedroom.jpg",
+      src: "/gallery/Home/Products_Bedroom.png",
       alt: "Bedroom Thumbnail",
     },
     excerpt:
