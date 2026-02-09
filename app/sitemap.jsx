@@ -8,6 +8,7 @@ export default function sitemap() {
     { route: "", changeFrequency: "weekly", priority: 0.8 },
     { route: "about", changeFrequency: "yearly", priority: 0.6 },
     { route: "contact", changeFrequency: "yearly", priority: 0.6 },
+    { route: "products", changeFrequency: "monthly", priority: 0.7 },
   ].map(({ route, changeFrequency, priority }) => ({
     url: `${BASE_URL}/${route}`,
     lastModified: new Date().toISOString(),

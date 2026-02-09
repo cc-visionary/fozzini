@@ -1,9 +1,7 @@
-"use client";
-
 import { Link } from "@nextui-org/link";
 import Image from "next/image";
 
-import { FOOTER, HOME } from "@/data"; // Import the footer data from your data file
+import { FOOTER } from "@/data";
 
 export const Footer = () => {
   const {

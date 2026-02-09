@@ -8,7 +8,7 @@ import Carousel from "@/components/carousel";
 // Static paths generation
 export async function generateStaticParams() {
   return PRODUCTS.map(({ slug }) => ({
-    brand: slug,
+    product: slug,
   }));
 }
 
@@ -18,15 +18,31 @@ export async function generateMetadata({ params }) {
   if (!productData) return notFound();
 
   return {
-    title: `${productData.name} | Explore ${productData.name} Products & Designs`,
-    description: productData.description,
+    title: `${productData.name} | Fozzini Lifestyle Inc.`,
+    description: `Explore Fozzini's ${productData.name.toLowerCase()} modular cabinetry collection. ${productData.description}`,
     openGraph: {
-      title: `${productData.name}`,
-      description: productData.description,
+      title: `${productData.name} | Fozzini Lifestyle Inc.`,
+      description: `Explore Fozzini's ${productData.name.toLowerCase()} modular cabinetry collection. ${productData.description}`,
       url: `https://fozzini.com/products/${productData.slug}`,
       siteName: "Fozzini Lifestyle Inc.",
-      images: [productData.thumbnail.src],
+      images: [
+        {
+          url: `${process.env.DOMAIN_URL}${productData.thumbnail.src}`,
+          width: 1200,
+          height: 630,
+          alt: `${productData.name} - Fozzini Lifestyle Inc.`,
+        },
+      ],
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${productData.name} | Fozzini Lifestyle Inc.`,
+      description: `Explore Fozzini's ${productData.name.toLowerCase()} modular cabinetry collection. ${productData.description}`,
+      images: [`${process.env.DOMAIN_URL}${productData.thumbnail.src}`],
+    },
+    alternates: {
+      canonical: `https://fozzini.com/products/${productData.slug}`,
     },
   };
 }

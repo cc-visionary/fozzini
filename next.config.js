@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "nolte-prod-ebcwh6b9axcgebb3.z01.azurefd.net",
+      },
+    ],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if

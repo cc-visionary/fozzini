@@ -15,29 +15,35 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
 export const metadata = {
-  title: "Fozzini Lifestyle Inc.",
+  title: "Fozzini Lifestyle Inc. | Premium Modular Cabinetry for Filipino Homes",
   description:
-    "Discover how Fozzini Lifestyle Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+    "Fozzini Lifestyle Inc. curates the finest international modular cabinetry brands for Filipino homes. Explore premium kitchen, living room, bedroom, and bathroom designs built with style and function.",
   openGraph: {
-    title: "Fozzini Lifestyle Inc.",
+    title:
+      "Fozzini Lifestyle Inc. | Premium Modular Cabinetry for Filipino Homes",
     type: "website",
+    url: "https://fozzini.com",
+    siteName: "Fozzini Lifestyle Inc.",
     description:
-      "Discover how Fozzini Lifestyle Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+      "Fozzini Lifestyle Inc. curates the finest international modular cabinetry brands for Filipino homes. Explore premium kitchen, living room, bedroom, and bathroom designs built with style and function.",
     images: [
       {
-        url: `${process.env.DOMAIN_URL}/gallery/Home/Hero_HomePage1_Desktop.webp`,
+        url: `${process.env.DOMAIN_URL}/gallery/About Us/AboutCover.jpg`,
+        width: 1200,
+        height: 630,
         alt: "Fozzini Lifestyle Inc. Showroom",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fozzini Lifestyle Inc.",
+    title:
+      "Fozzini Lifestyle Inc. | Premium Modular Cabinetry for Filipino Homes",
     description:
-      "Discover how Fozzini Lifestyle Inc. bridges global excellence with local aspirations, curating the finest international brands for Filipino homes.",
+      "Fozzini Lifestyle Inc. curates the finest international modular cabinetry brands for Filipino homes. Explore premium kitchen, living room, bedroom, and bathroom designs built with style and function.",
     images: [
       {
-        url: `${process.env.DOMAIN_URL}/gallery/Home/Hero_HomePage1_Desktop.webp`,
+        url: `${process.env.DOMAIN_URL}/gallery/About Us/AboutCover.jpg`,
         alt: "Fozzini Lifestyle Inc. Showroom",
       },
     ],

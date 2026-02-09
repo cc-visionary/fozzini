@@ -2,21 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                        supported by Chrome, Edge, Opera and Firefox */
-}
-
 .swiper-button-next,
 .swiper-button-prev {
   color: #ffffff;
   font-size: 1.5rem;
-  transition: all 0.25s;
+  transition: opacity 0.25s;
 }
 
 .swiper-button-next:hover,
@@ -29,13 +19,13 @@
 .swiper-pagination-bullet {
   background: #ffffff;
   opacity: 0.7;
-  transition: all 0.25s;
+  transition: opacity 0.25s;
 }
 
 .swiper-pagination-bullet-active {
   background: #ffffff;
   opacity: 1;
-  transition: all 0.25s;
+  transition: opacity 0.25s;
 }
 
 .rounded-large {

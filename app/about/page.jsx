@@ -5,31 +5,33 @@ import { ABOUT } from "@/data";
 
 export async function generateMetadata() {
   return {
-    title: "About Us | Fozzini Lifestyle Concepts",
+    title: "About Us | Fozzini Lifestyle Inc.",
     description:
-      "Discover Fozzini Lifestyle Concepts—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+      "Learn about Fozzini Lifestyle Inc.—bridging global excellence with local aspirations. Discover our history, mission, and commitment to bringing world-class modular cabinetry to Filipino homes.",
     openGraph: {
-      title: "About Us | Fozzini Lifestyle Concepts",
+      title: "About Us | Fozzini Lifestyle Inc.",
       description:
-        "Discover Fozzini Lifestyle Concepts—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
+        "Learn about Fozzini Lifestyle Inc.—bridging global excellence with local aspirations. Discover our history, mission, and commitment to bringing world-class modular cabinetry to Filipino homes.",
       url: "https://fozzini.com/about",
-      siteName: "Fozzini Lifestyle Concepts",
+      siteName: "Fozzini Lifestyle Inc.",
       images: [
         {
-          url: "/gallery/About Us/AboutCover.jpg",
+          url: `${process.env.DOMAIN_URL}/gallery/About Us/AboutCover.jpg`,
           width: 1200,
           height: 630,
-          alt: "Fozzini Lifestyle Concepts About Us",
+          alt: "Fozzini Lifestyle Inc. About Us",
         },
       ],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: "About Us | Fozzini Lifestyle Concepts",
+      title: "About Us | Fozzini Lifestyle Inc.",
       description:
-        "Discover Fozzini Lifestyle Concepts—bridging global excellence with local aspirations. Learn about our history, mission, and commitment to design innovation.",
-      images: ["/gallery/About Us/AboutCover.jpg"],
+        "Learn about Fozzini Lifestyle Inc.—bridging global excellence with local aspirations. Discover our history, mission, and commitment to bringing world-class modular cabinetry to Filipino homes.",
+      images: [
+        `${process.env.DOMAIN_URL}/gallery/About Us/AboutCover.jpg`,
+      ],
     },
     alternates: {
       canonical: "https://fozzini.com/about",

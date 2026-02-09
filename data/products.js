@@ -214,7 +214,7 @@ export const PRODUCTS = [
     name: "Bathroom",
     thumbnail: {
       src: "/gallery/Home/Products_Bathroom.jpg",
-      alt: "Kitchen Thumbnail",
+      alt: "Bathroom Thumbnail",
     },
     excerpt: "Maximizing your bathroom space is a necessary luxury.",
     description: "Browse through modular cabinetry built for a modern bath.",

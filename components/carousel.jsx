@@ -29,7 +29,7 @@ export default function Carousel({
             <Image
               src={src}
               alt={caption}
-              loading="eager"
+              loading={index === 0 ? "eager" : "lazy"}
               className={clsx("object-cover object-bottom", sizeClass)}
               height={height}
               width={width}
