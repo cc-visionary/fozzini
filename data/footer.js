@@ -26,13 +26,13 @@ export const FOOTER = {
       embedMaps:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.3359262947624!2d120.9597180758399!3d14.693585385803884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b474fc539e29%3A0x9299ac596b70063c!2sFozzini%20Lifestyle%20Concepts%2C%20Inc.!5e0!3m2!1sen!2sph!4v1744516658667!5m2!1sen!2sph",
       openingHours: "Monday to Saturday (9:00am to 6:00pm)",
-      phones: ["+63 2 8807 5238", "+63 966 806 8999"],
+      phones: ["02 8 294 6910-11", "0922 855 3790"],
     },
   ],
   contactInformation: {
-    email: "fozzinidesign@gmail.com",
-    telephone: "+63 2 8807 5238",
-    phone: "+63 966 806 8999",
+    email: "sales@fozzini.com",
+    telephone: "02 8 294 6910-11",
+    phone: "0922 855 3790",
   },
   socialLinks: [
     {
